@@ -2,20 +2,22 @@ import Matter, { Engine, Render, World, Bodies, Runner, Body } from "matter-js";
 import { useRef, useEffect } from "react";
 import { ballzData } from "../data/ballz";
 import "../cssComp/f.css";
+const width = 1000;
+const height = 300;
 
 function creatingBallz() {
   let ballz: Matter.Body[] = [];
   ballzData.forEach((ball) => {
     if (ball.shape == "c") {
-      const circle = Bodies.circle(300, 150, 40, {
+      const circle = Bodies.circle(width / 2, height / 2, 50, {
         friction: 0,
         frictionAir: 0,
         frictionStatic: 0,
         render: {
           sprite: {
             texture: ball.img,
-            xScale: 0.18,
-            yScale: 0.18,
+            xScale: 0.19,
+            yScale: 0.19,
           },
         },
       });
@@ -26,15 +28,15 @@ function creatingBallz() {
       );
       ballz.push(circle);
     } else if (ball.shape == "s") {
-      const square = Bodies.rectangle(300, 150, 55, 55, {
+      const square = Bodies.rectangle(width / 2, height / 2, 70, 70, {
         friction: 0,
         frictionAir: 0,
         frictionStatic: 0,
         render: {
           sprite: {
             texture: ball.img,
-            xScale: 0.17,
-            yScale: 0.17,
+            xScale: 0.15,
+            yScale: 0.15,
           },
         },
       });
@@ -53,12 +55,9 @@ function creatingBallz() {
 }
 
 export default function Physics() {
-  const colorWalls = "black";
+  const colorWalls = "white";
   const scene = useRef<HTMLDivElement>(null);
   const engine = useRef(Engine.create());
-
-  const width = 800;
-  const height = 300;
 
   useEffect(() => {
     const currentScene = scene.current;
