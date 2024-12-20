@@ -57,7 +57,6 @@ export default function Physics() {
   const scene = useRef<HTMLDivElement>(null);
   const engine = useRef(Engine.create());
 
-  const boxRef = useRef(null);
   const width = 800;
   const height = 300;
 
