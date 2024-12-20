@@ -10,7 +10,7 @@ export default function About() {
           alt=""
         />
       </div>
-      <div className="boxx right flex-auto w-1/2  text-justify leading-relaxed  text-gray-800  font-medium text-xl hover:text-green-700  hover:text-extrabold duration-300">
+      <div className="boxx right flex-auto w-1/2 text-justify leading-relaxed  text-gray-800  font-medium text-xl hover:text-green-700  hover:text-extrabold duration-300">
         <p className="pt-5">
           {" "}
           <span className="text-5xl font-bold text-gray-800">
