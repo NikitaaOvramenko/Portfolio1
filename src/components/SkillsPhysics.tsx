@@ -66,6 +66,7 @@ export default function Physics() {
       SetWid(500);
     } else {
       SetWid(1000);
+      SetHei(300);
     }
   }, [windowWidth]);
 
