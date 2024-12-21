@@ -30,7 +30,7 @@ function creatingBallz(width: number, height: number) {
       const square = Bodies.rectangle(
         width / 2,
         height / 2,
-        width / 14.28, //70
+        width / 14.27, //70
         width / 14.28,
         {
           friction: 0,
