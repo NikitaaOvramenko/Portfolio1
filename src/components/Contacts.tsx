@@ -1,4 +1,3 @@
-import Naming from "./Naming";
 export default function Contacts() {
   return (
     <>
