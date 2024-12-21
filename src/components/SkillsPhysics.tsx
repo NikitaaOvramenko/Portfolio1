@@ -27,18 +27,24 @@ function creatingBallz(width: number, height: number) {
       );
       ballz.push(circle);
     } else if (ball.shape == "s") {
-      const square = Bodies.rectangle(width / 2, height / 2, 70, 70, {
-        friction: 0,
-        frictionAir: 0,
-        frictionStatic: 0,
-        render: {
-          sprite: {
-            texture: ball.img,
-            xScale: width / 6666.66, //0.15
-            yScale: width / 6666.66,
+      const square = Bodies.rectangle(
+        width / 2,
+        height / 2,
+        width / 14.28, //70
+        width / 14.28,
+        {
+          friction: 0,
+          frictionAir: 0,
+          frictionStatic: 0,
+          render: {
+            sprite: {
+              texture: ball.img,
+              xScale: width / 6666.66, //0.15
+              yScale: width / 6666.66,
+            },
           },
-        },
-      });
+        }
+      );
 
       Body.applyForce(
         square,
