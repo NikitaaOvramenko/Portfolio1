@@ -64,15 +64,14 @@ export default function Physics() {
   useEffect(() => {
     if (windowWidth < 1000) {
       SetWid(500);
+      SetHei(300);
+
+      if (windowWidth < 500) {
+        SetWid(250);
+        SetHei(300);
+      }
     } else {
       SetWid(1000);
-      SetHei(300);
-    }
-  }, [windowWidth]);
-
-  useEffect(() => {
-    if (windowWidth < 500) {
-      SetWid(250);
     }
   }, [windowWidth]);
 
@@ -128,6 +127,7 @@ export default function Physics() {
       friction: 0,
     });
     // Add the box and ground to the world
+
     World.add(currentEngine.world, [
       ground,
       leftGround,
@@ -144,12 +144,13 @@ export default function Physics() {
 
     return () => {
       Render.stop(render);
-      World.clear(currentEngine.world, true);
+      Matter.Composite.clear(currentEngine.world, false);
       Engine.clear(currentEngine);
       render.canvas.remove();
       render.textures = {};
+      console.log("Cleanup triggered");
     };
-  }, [curWid]);
+  }, [curWid, curHei]);
 
   return (
     <>
