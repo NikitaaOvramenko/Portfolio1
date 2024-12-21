@@ -22,7 +22,7 @@ export default function Projects() {
     <>
       <div className="flex flex-col justify-between border-b-4 border-black">
         <Naming name="Projects"></Naming>
-        <div className="projects relative flex items-center w-full h-96">
+        <div className="projects relative flex items-center w-full h-auto">
           <MdChevronLeft
             size={40}
             className="hover:scale-105 ease-in-out active:scale-50 duration-300"

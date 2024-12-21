@@ -1,23 +1,22 @@
 import Matter, { Engine, Render, World, Bodies, Runner, Body } from "matter-js";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { ballzData } from "../data/ballz";
+import useWindowDimensions from "../helpers/WindowHool";
 import "../cssComp/f.css";
-const width = 1000;
-const height = 300;
 
-function creatingBallz() {
+function creatingBallz(width: number, height: number) {
   let ballz: Matter.Body[] = [];
   ballzData.forEach((ball) => {
     if (ball.shape == "c") {
-      const circle = Bodies.circle(width / 2, height / 2, 50, {
+      const circle = Bodies.circle(width / 2, height / 2, width / 20, {
         friction: 0,
         frictionAir: 0,
         frictionStatic: 0,
         render: {
           sprite: {
             texture: ball.img,
-            xScale: 0.19,
-            yScale: 0.19,
+            xScale: width / 5263.157, //0.19 should be
+            yScale: width / 5263.157,
           },
         },
       });
@@ -35,8 +34,8 @@ function creatingBallz() {
         render: {
           sprite: {
             texture: ball.img,
-            xScale: 0.15,
-            yScale: 0.15,
+            xScale: width / 6666.66, //0.15
+            yScale: width / 6666.66,
           },
         },
       });
@@ -58,6 +57,23 @@ export default function Physics() {
   const colorWalls = "white";
   const scene = useRef<HTMLDivElement>(null);
   const engine = useRef(Engine.create());
+  const { width: windowWidth } = useWindowDimensions();
+  const [curWid, SetWid] = useState(1000);
+  const [curHei, SetHei] = useState(300);
+
+  useEffect(() => {
+    if (windowWidth < 1000) {
+      SetWid(500);
+    } else {
+      SetWid(1000);
+    }
+  }, [windowWidth]);
+
+  useEffect(() => {
+    if (windowWidth < 500) {
+      SetWid(250);
+    }
+  }, [windowWidth]);
 
   useEffect(() => {
     const currentScene = scene.current;
@@ -72,8 +88,8 @@ export default function Physics() {
       element: currentScene!,
       engine: currentEngine,
       options: {
-        width: width,
-        height: height,
+        width: curWid,
+        height: curHei,
         wireframes: false,
         background: "#ffffff",
       },
@@ -87,25 +103,25 @@ export default function Physics() {
     const mConstraint = MouseConstraint.create(currentEngine, options);
 
     // Add ground
-    const ground = Bodies.rectangle(width / 2, height, width, 5, {
+    const ground = Bodies.rectangle(curWid / 2, curHei, curWid, 5, {
       isStatic: true,
       render: { fillStyle: colorWalls },
       friction: 0,
     });
 
-    const rightGround = Bodies.rectangle(width, height / 2, 5, height, {
+    const rightGround = Bodies.rectangle(curWid, curHei / 2, 5, curHei, {
       isStatic: true,
       render: { fillStyle: colorWalls },
       friction: 0,
     });
 
-    const leftGround = Bodies.rectangle(0, height / 2, 5, height, {
+    const leftGround = Bodies.rectangle(0, curHei / 2, 5, curHei, {
       isStatic: true,
       render: { fillStyle: colorWalls },
       friction: 0,
     });
 
-    const ceiling = Bodies.rectangle(width / 2, 0, width, 5, {
+    const ceiling = Bodies.rectangle(curWid / 2, 0, curWid, 5, {
       isStatic: true,
       render: { fillStyle: colorWalls },
       friction: 0,
@@ -117,7 +133,7 @@ export default function Physics() {
       rightGround,
       ceiling,
       mConstraint,
-      ...creatingBallz(),
+      ...creatingBallz(curWid, curHei),
     ]);
 
     // Run the engine and renderer
@@ -132,12 +148,16 @@ export default function Physics() {
       render.canvas.remove();
       render.textures = {};
     };
-  }, []);
+  }, [curWid]);
 
   return (
-    <div
-      ref={scene}
-      className="skills h-96 border-b-4 py-5  border-black w-full flex justify-center"
-    />
+    <>
+      <div
+        ref={scene}
+        className="skills h-auto border-b-4 py-5  border-black w-full flex justify-center"
+      />
+
+      <div>{useWindowDimensions().width}</div>
+    </>
   );
 }
