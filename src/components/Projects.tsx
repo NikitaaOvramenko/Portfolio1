@@ -1,7 +1,6 @@
 import { data } from "../data/projectsData";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import "../cssComp/scroll.css";
-import Naming from "./Naming";
 
 export default function Projects() {
   const slideLeft = () => {
@@ -21,7 +20,6 @@ export default function Projects() {
   return (
     <>
       <div className="flex flex-col justify-between border-b-4 border-black">
-        <Naming name="Projects"></Naming>
         <div className="projects relative flex items-center w-full h-auto">
           <MdChevronLeft
             size={40}
@@ -33,9 +31,12 @@ export default function Projects() {
             className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth"
           >
             {data.map((item) => (
-              <div className="w-[300px] h-[300px] inline-flex flex-col inline-block text-center p-2 cursor-pointer hover:scale-105 ease-in-out duration-300 text-2xl text-wrap justify-items-center items-center">
+              <div className=" w-[150px] h-[150px]  sm:w-[300px] sm:h-[300px] 2xl:w-[600px] 2xl:h-[600px] inline-flex flex-col inline-block text-center p-2 cursor-pointer hover:scale-105 sm:text-2xl 2xl:text-4xl ease-in-out duration-300  text-wrap justify-items-center items-center">
                 {item.name}
-                <img className="w-[160px] h=[160px] pt-3 " src={item.img}></img>
+                <img
+                  className="  w-[80px] h-[80px]  sm:w-[160px] sm:h-[160px] 2xl:w-[320px] 2xl:h-[320px] pt-3 "
+                  src={item.img}
+                ></img>
               </div>
             ))}
           </div>
