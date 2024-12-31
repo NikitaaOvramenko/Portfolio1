@@ -1,13 +1,7 @@
 import "../cssComp/cont.css";
-import { useState } from "react";
 import Swal from "sweetalert2";
 
 export default function Contacts() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
   const onSubmit = async (event: any) => {
     event.preventDefault();
     const formData = new FormData(event.target);
