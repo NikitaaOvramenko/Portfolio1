@@ -1,15 +1,14 @@
 import Face from "../iconsProj/face.png";
-import "../cssComp/f.css";
 export default function About() {
   return (
-    <div className="test flex flex-wrap h-full w-full px-5 pt-4  border-4 border-black">
+    <div className="main flex flex-wrap h-full w-full px-5 py-3 bg-black  border-4 border-black">
       <div className="boxx left flex-auto md:w-1/2 w-full ">
-        <img className="w-full h-full  object-cover" src={Face} alt="" />
+        <img className="w-auto h-full  object-cover" src={Face} alt="" />
       </div>
-      <div className="boxx right flex-auto md:w-1/2 w-full text-justify leading-relaxed  text-gray-800  font-medium md:text-xl xl:text-2xl 2xl:text-3xl hover:text-green-700  hover:text-extrabold duration-300">
+      <div className="boxx right flex-auto md:w-1/2 w-full text-justify text-white  font-medium md:text-xl xl:text-2xl 2xl:text-3xl hover:text-yellow-200  hover:text-extrabold duration-300">
         <p className="pt-5 text-center">
           {" "}
-          <span className=" text-3xl md:text-5xl 2xl:text-7xl font-bold text-gray-800 ">
+          <span className=" text-3xl md:text-5xl 2xl:text-7xl font-bold text-white ">
             Nikita Ovramenko
           </span>
         </p>

@@ -3,7 +3,7 @@ import inst from "../icons/instagram.png";
 import gmail from "../icons/gmail.png";
 
 export default function NavBar() {
-  const rightItems = ["Contacts", "About", "Projects", "Skills"];
+  const rightItems = ["About", "Projects", "Skills", "Contacts"];
   const links = [
     "https://github.com/NikitaaOvramenko",
     "https://www.instagram.com/ovramenkonikita/",

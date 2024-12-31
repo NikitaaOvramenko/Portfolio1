@@ -1,5 +1,6 @@
 import { data } from "../data/projectsData";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import "../cssComp/f.css";
 import "../cssComp/scroll.css";
 
 export default function Projects() {
@@ -19,8 +20,8 @@ export default function Projects() {
 
   return (
     <>
-      <div className="flex flex-col justify-between border-b-4 border-black">
-        <div className="projects relative flex items-center w-full h-auto">
+      <div className=" main flex  flex-col justify-between border-b-4 border-black">
+        <div className="projects relative flex items-center w-full h-full ">
           <MdChevronLeft
             size={40}
             className="hover:scale-105 ease-in-out active:scale-50 duration-300"
@@ -31,10 +32,11 @@ export default function Projects() {
             className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth"
           >
             {data.map((item) => (
-              <div className=" w-[150px] h-[150px]  sm:w-[300px] sm:h-[300px] 2xl:w-[600px] 2xl:h-[600px] inline-flex flex-col inline-block text-center p-2 cursor-pointer hover:scale-105 sm:text-2xl 2xl:text-4xl ease-in-out duration-300  text-wrap justify-items-center items-center">
-                {item.name}
+              <div className=" w-[150px] h-[150px]  sm:w-[300px] sm:h-[300px] 2xl:w-[600px] 2xl:h-[600px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 sm:text-2xl 2xl:text-4xl ease-in-out duration-300  text-wrap justify-center items-center">
+                <div>{item.name}</div>
+
                 <img
-                  className="  w-[80px] h-[80px]  sm:w-[160px] sm:h-[160px] 2xl:w-[320px] 2xl:h-[320px] pt-3 "
+                  className="  w-[100px] h-[100px]  sm:w-[160px] sm:h-[160px] 2xl:w-[320px] 2xl:h-[320px] pt-3 "
                   src={item.img}
                 ></img>
               </div>

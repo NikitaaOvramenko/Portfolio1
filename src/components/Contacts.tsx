@@ -32,20 +32,24 @@ export default function Contacts() {
 
   return (
     <>
-      <div className="contacts flex w-full flex-wrap h-auto p-2">
-        <div className="left flex flex-col  w-full md:w-1/2 justify-between">
-          <div className="text-4xl flex-auto text-center">Location</div>
+      <div className="main contacts flex w-full flex-wrap h-auto p-2 ">
+        <div className="left flex flex-col  w-full md:w-1/2 gap-3 ">
+          <div className="text-4xl flex-auto text-center font-bold">
+            My Location
+          </div>
           <iframe
-            className="border-black flex-auto border rounded-md md:w-[400px] w-[200-x] md:h-80 h-40 self-center"
+            className="border-black flex-auto border rounded-md md:w-[500px] w-[200px] md:h-80 h-40 self-center"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=77%20mintwood%20road+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             allowFullScreen={true}
           ></iframe>
         </div>
 
-        <div className="right flex flex-col  w-full md:w-1/2 justify-between items-center">
-          <div className="text-4xl flex-auto text-center">Get in touch</div>
+        <div className="right flex flex-col  w-full md:w-1/2 justify-between items-center gap-3">
+          <div className="text-4xl flex-auto text-center font-bold">
+            Get in touch
+          </div>
           <form
-            className="md:w-[500px] w-[200-x] md:h-80 h-40 flex flex-col  items-center"
+            className="md:w-[500px] w-[300px] md:h-80 h-40 flex flex-col  items-center"
             onSubmit={onSubmit}
           >
             <div className="flex  flex-col gap-3">
@@ -55,23 +59,23 @@ export default function Contacts() {
               ></label>
               <input
                 name="name"
-                placeholder=" Name:"
+                placeholder="Name:"
                 type="text"
-                className="w-[300px]  h-8 border-b-2 border-black focus:outline-none"
+                className="w-[300px]   h-8 border-b-2  px-2 border-black focus:outline-none"
                 required
               />
             </div>
             <div className="flex flex-col gap-3">
-              <label htmlFor="" className="text-end self-end w-[60px]"></label>
+              <label htmlFor="" className="text-end self-end w-[60px] "></label>
               <input
                 name="email"
-                placeholder=" Email:"
+                placeholder="Email:"
                 type="email"
-                className="w-[300px]  h-8 border-b-2 border-black focus:outline-none"
+                className="w-[300px]  h-8 border-b-2 px-2 border-black focus:outline-none"
                 required
               />
             </div>
-            <div className="flex flex-col gap-3">
+            {/* <div className="flex flex-col gap-3">
               <label htmlFor="" className="text-end self-end w-[60px]"></label>
               <input
                 name="subject"
@@ -80,7 +84,7 @@ export default function Contacts() {
                 className="w-[300px]  h-8 border-b-2 border-black focus:outline-none"
                 required
               />
-            </div>
+            </div> */}
 
             <div className="flex flex-col gap-3 mt-8">
               <label
@@ -89,11 +93,11 @@ export default function Contacts() {
               ></label>
               <textarea
                 name="message"
-                className="message border-2 border-black focus:outline-none rounded resize-none "
+                className="message border-2 border-black px-2 pt-1 focus:outline-none rounded resize-none "
                 cols={33}
                 rows={5}
                 required
-                placeholder=" Message:"
+                placeholder="Message:"
               ></textarea>
             </div>
 

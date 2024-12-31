@@ -1,3 +1,25 @@
-.test{
-    background-image: linear-gradient(to bottom, #eeeaec, #e7e5e8, #dfe0e2, #d8dadc, #d2d5d6, #c3c5c6, #b4b6b6, #a5a7a7, #8a8c8c, #707171, #575858, #3f4040);
+#root{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    
+    
+    
 }
+
+
+.main{
+    flex-basis: 200px;
+    
+
+}
+
+@media screen and(min-width:1000px){
+
+    .main{
+        flex-basis: 600px;
+    
+    }
+    
+}
+

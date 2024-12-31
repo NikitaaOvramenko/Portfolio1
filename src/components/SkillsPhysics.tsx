@@ -2,7 +2,6 @@ import Matter, { Engine, Render, World, Bodies, Runner, Body } from "matter-js";
 import { useRef, useEffect, useState } from "react";
 import { ballzData } from "../data/ballz";
 import useWindowDimensions from "../helpers/WindowHool";
-import "../cssComp/f.css";
 
 function creatingBallz(width: number, height: number) {
   let ballz: Matter.Body[] = [];
@@ -60,24 +59,29 @@ function creatingBallz(width: number, height: number) {
 }
 
 export default function Physics() {
-  const colorWalls = "white";
+  const colorWalls = "black";
   const scene = useRef<HTMLDivElement>(null);
   const engine = useRef(Engine.create());
   const { width: windowWidth } = useWindowDimensions();
   const [curWid, SetWid] = useState(1000);
   const [curHei, SetHei] = useState(300);
 
+  const text = document.createElement("div");
+
+  text.style.color = "yellow";
+
   useEffect(() => {
     if (windowWidth < 1000) {
       SetWid(500);
-      SetHei(300);
+      SetHei(150);
 
       if (windowWidth < 500) {
         SetWid(250);
-        SetHei(300);
+        SetHei(75);
       }
     } else {
       SetWid(1000);
+      SetHei(300);
     }
   }, [windowWidth]);
 
@@ -97,7 +101,7 @@ export default function Physics() {
         width: curWid,
         height: curHei,
         wireframes: false,
-        background: "#ffffff",
+        background: "#000000",
       },
     });
 
@@ -162,10 +166,14 @@ export default function Physics() {
     <>
       <div
         ref={scene}
-        className="skills h-auto border-b-4 py-5  border-black w-full flex justify-center"
-      />
+        className="main skills h-full  border-b-4 py-5  border-black bg-black w-full flex justify-center items-center relative "
+      >
+        <div className=" absolute select-none text-white text-2xl md:text-6xl font-bold  ">
+          Skills
+        </div>
+      </div>
 
-      <div>{useWindowDimensions().width}</div>
+      {/* <div>{useWindowDimensions().width}</div> */}
     </>
   );
 }
