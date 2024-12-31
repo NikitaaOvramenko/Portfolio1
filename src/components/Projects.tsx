@@ -20,16 +20,20 @@ export default function Projects() {
 
   return (
     <>
-      <div className=" main flex  flex-col justify-between border-b-4 border-black">
-        <div className="projects relative flex items-center w-full h-full ">
+      <div className=" main flex  flex-col justify-between border-b-4 border-black relative ">
+        <div className="projects  flex items-center w-full h-full ">
           <MdChevronLeft
             size={40}
-            className="hover:scale-105 ease-in-out active:scale-50 duration-300"
+            className="hover:scale-105 ease-in-out active:scale-50 duration-300 relative z-10"
             onClick={slideLeft}
           />
+          <div className="absolute text-black text-2xl md:text-6xl font-bold z-0 w-full flex justify-center items-center">
+            Projects
+          </div>
+
           <div
             id="slider"
-            className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth"
+            className="w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
           >
             {data.map((item) => (
               <div className=" w-[150px] h-[150px]  sm:w-[300px] sm:h-[300px] 2xl:w-[600px] 2xl:h-[600px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 sm:text-2xl 2xl:text-4xl ease-in-out duration-300  text-wrap justify-center items-center">
@@ -43,7 +47,7 @@ export default function Projects() {
             ))}
           </div>
           <MdChevronRight
-            className="hover:scale-105 ease-in-out active:scale-50 duration-300"
+            className="hover:scale-105 ease-in-out active:scale-50 duration-300 relative z-10"
             size={40}
             onClick={sliderRight}
           />

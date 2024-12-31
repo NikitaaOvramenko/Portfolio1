@@ -166,7 +166,7 @@ export default function Physics() {
     <>
       <div
         ref={scene}
-        className="main skills h-full  border-b-4 py-5  border-black bg-black w-full flex justify-center items-center relative "
+        className="main skills  h-[150px] sm:h-[300px] 2xl:h-[600px]  border-b-4 py-5  border-black bg-black w-full flex justify-center items-center relative "
       >
         <div className=" absolute select-none text-white text-2xl md:text-6xl font-bold  ">
           Skills
