@@ -1,0 +1,11 @@
+.message > input::placeholder {
+    text-align: right;
+}
+
+.message > input::-moz-placeholder { /* Firefox */
+    text-align: right;
+}
+
+.message > input::-webkit-input-placeholder { /* Chrome, Safari */
+    text-align: right;
+}
