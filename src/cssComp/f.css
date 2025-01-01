@@ -1,15 +1,18 @@
 #root{
     display: flex;
     flex-direction: column;
-    flex-basis: 300px;
+    
+    
     
     
     
 }
 
 
+
+
 .main{
-    flex-basis: 200px;
+    /* flex-basis: 200px; */
     
 
 }
@@ -17,7 +20,7 @@
 @media screen and(min-width:1000px){
 
     .main{
-        flex-basis: 600px;
+        /* flex-basis: 600px; */
     
     }
     
