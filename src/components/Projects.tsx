@@ -20,7 +20,10 @@ export default function Projects() {
 
   return (
     <>
-      <div className="  h-[150px] sm:h-[300px] 2xl:h-[600px]  flex  flex-col justify-center border-b-4 border-black relative ">
+      <div
+        id="Projects"
+        className="  h-[200px] sm:h-[300px] 2xl:h-[600px]  flex  flex-col justify-center border-b-4 border-black relative "
+      >
         <div className="projects  flex items-center  w-full h-full ">
           <MdChevronLeft
             size={40}

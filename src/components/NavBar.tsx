@@ -1,14 +1,17 @@
 import git from "../icons/github.png";
 import inst from "../icons/instagram.png";
 import gmail from "../icons/gmail.png";
+import resume from "../pdfs/Nikita_s_Resumehwh-1.pdf";
 
 export default function NavBar() {
-  const rightItems = ["About", "Projects", "Skills", "Contacts"];
+  const rightItems = ["Resume", "Projects", "Skills", "Contacts"];
   const links = [
     "https://github.com/NikitaaOvramenko",
     "https://www.instagram.com/ovramenkonikita/",
     "mailto:nikita.ovramenko@torontomu.ca",
   ];
+
+  const linksRight = [resume, "#Projects", "#Skills", "#Contacts"];
   const icons = [git, inst, gmail];
   return (
     <>
@@ -28,10 +31,12 @@ export default function NavBar() {
           ))}
         </div>
         <div className="right flex flex-auto w-28 text-white justify-between">
-          {rightItems.map((item) => (
+          {rightItems.map((item, index) => (
             <>
               <div className="textBox flex flex-auto w-4 justify-center items-center hover:bg-white hover:text-black scale-105 transition-colors ease-in-out duration-300">
-                <div>{item}</div>
+                <a href={linksRight[index]} download>
+                  <div>{item}</div>
+                </a>
               </div>
             </>
           ))}
