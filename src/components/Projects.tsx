@@ -22,7 +22,7 @@ export default function Projects() {
     <>
       <div
         id="Projects"
-        className="  h-[200px] sm:h-[300px] 2xl:h-[600px]  flex  flex-col justify-center border-b-4 border-black relative "
+        className="  h-[250px] sm:h-[300px] 2xl:h-[600px]  flex  flex-col justify-center border-b-4 border-black relative "
       >
         <div className="projects  flex items-center  w-full h-full ">
           <MdChevronLeft
@@ -36,10 +36,10 @@ export default function Projects() {
 
           <div
             id="slider"
-            className="  w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
+            className=" flex   items-center  w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
           >
             {data.map((item) => (
-              <div className=" w-[150px] h-[150px]  sm:w-[250px] sm:h-[250px] 2xl:w-[300px] 2xl:h-[300px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 text-xs sm:text-xl  ease-in-out duration-300  text-wrap justify-center items-center">
+              <div className=" w-[150px] h-[150px]  sm:w-[250px] sm:h-[250px] 2xl:w-[300px] 2xl:h-[300px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 text-xs sm:text-xl  ease-in-out duration-300  text-wrap justify-center items-center shrink-0">
                 <div>{item.name}</div>
 
                 <img

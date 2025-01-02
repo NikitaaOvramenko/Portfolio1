@@ -9,7 +9,7 @@ import rock from "../iconsProj/fist.png";
 export const data = [
   {
     id: 1,
-    name: "Home Server and Online Store Bot",
+    name: "Home Server",
     img: eyeS,
   },
   {
@@ -20,7 +20,7 @@ export const data = [
 
   {
     id: 3,
-    name: "General-Purpose Processor Design",
+    name: "CPU Design",
     img: cpu,
   },
 

@@ -3,12 +3,12 @@ export default function About() {
   return (
     <div className=" flex flex-col sm:flex-row  h-full w-full px-5 pt-3 bg-black  border-4 border-black items-center ">
       {/* left */}
-      <div className="boxx left w-1/2 flex justify-center items-center ">
+      <div className="boxx left  w-full sm:w-1/2 flex justify-center items-center ">
         <img className="max-w-full h-auto  " src={Face} alt="" />
       </div>
 
       {/* right */}
-      <div className="boxx right w-full sm:w-1/2 text-white text-[1.5vw]  sm:text-[1.5vw] font-medium md:text-[1.5vw] xl:text-2xl 2xl:text-3xl hover:text-yellow-200  hover:text-extrabold duration-300">
+      <div className="boxx right    w-full sm:w-1/2 text-white text-[3vw]  sm:text-[1.5vw] font-medium md:text-[1.5vw] xl:text-2xl 2xl:text-3xl hover:text-yellow-200  hover:text-extrabold duration-300">
         <p className="pt-5 text-center">
           {" "}
           <span className=" text-[4vw] md:text-[4vw] 2xl:text-7xl font-bold text-white ">

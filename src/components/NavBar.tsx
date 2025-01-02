@@ -19,25 +19,33 @@ export default function NavBar() {
         <div className="left flex flex-auto w-5">
           {icons.map((icon, index) => (
             <>
-              <div className="picBox flex mx-1 w-10 justify-center items-center">
-                <a target="_blank" href={links[index]}>
+              <a
+                className="picBox flex mx-1 w-10 justify-center items-center"
+                target="_blank"
+                href={links[index]}
+              >
+                <div>
                   <img
                     src={icon}
                     className="w-8 h-8 active:scale-50 duration-300"
                   ></img>
-                </a>
-              </div>
+                </div>
+              </a>
             </>
           ))}
         </div>
         <div className="right flex flex-auto w-28 text-white justify-between">
           {rightItems.map((item, index) => (
             <>
-              <div className="textBox flex flex-auto w-4 justify-center items-center hover:bg-white hover:text-black scale-105 transition-colors ease-in-out duration-300">
-                <a href={linksRight[index]} download>
+              <a
+                className="textBox flex flex-auto w-4 justify-center items-center hover:bg-white hover:text-black scale-105 transition-colors ease-in-out duration-300"
+                href={linksRight[index]}
+                download
+              >
+                <div>
                   <div>{item}</div>
-                </a>
-              </div>
+                </div>
+              </a>
             </>
           ))}
         </div>
