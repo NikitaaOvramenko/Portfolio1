@@ -33,21 +33,9 @@ export default function Contacts() {
   return (
     <div
       id="Contacts"
-      className="main  contacts flex flex-row-reverse overflow-x-auto scroll whitespace-nowrap w-full h-auto sm:justify-center snap-x snap-mandatory p-2 "
+      className="main  contacts flex  overflow-x-auto scroll whitespace-nowrap w-full h-auto sm:justify-center snap-x snap-mandatory  p-2 "
     >
       {/* left */}
-      <div className="left flex flex-col snap-center w-[500px]  gap-3 flex-shrink-0   ">
-        <div className="text-3xl sm:text-4xl text-center font-bold w-full ">
-          My Location
-        </div>
-        <iframe
-          className="border-black flex-auto border rounded-md  self-center"
-          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Thornhill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          allowFullScreen={true}
-        ></iframe>
-      </div>
-
-      {/* right */}
 
       <div className="right flex  flex-col snap-center w-[500px]  gap-3 flex-shrink-0  ">
         <div className="text-3xl sm:text-4xl  text-center font-bold w-full">
@@ -77,16 +65,6 @@ export default function Contacts() {
               required
             />
           </div>
-          {/* <div className="flex flex-col gap-3">
-              <label htmlFor="" className="text-end self-end w-[60px]"></label>
-              <input
-                name="subject"
-                placeholder=" Subject:"
-                type="text"
-                className="w-[300px]  h-8 border-b-2 border-black focus:outline-none"
-                required
-              />
-            </div> */}
 
           <div className="flex flex-col gap-3 mt-8">
             <label
@@ -110,6 +88,18 @@ export default function Contacts() {
             Submit
           </button>
         </form>
+      </div>
+
+      {/* right */}
+      <div className="left flex flex-col snap-center w-[500px]  gap-3 flex-shrink-0   ">
+        <div className="text-3xl sm:text-4xl text-center font-bold w-full ">
+          My Location
+        </div>
+        <iframe
+          className="border-black flex-auto border rounded-md  self-center"
+          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Thornhill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          allowFullScreen={true}
+        ></iframe>
       </div>
     </div>
   );
