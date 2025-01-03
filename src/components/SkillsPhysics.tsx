@@ -76,8 +76,8 @@ export default function Physics() {
       SetHei(150);
 
       if (windowWidth < 500) {
-        SetWid(250);
-        SetHei(75);
+        SetWid(350);
+        SetHei(200);
       }
     } else {
       SetWid(1000);
@@ -169,7 +169,7 @@ export default function Physics() {
         ref={scene}
         className="main skills  h-[250px] sm:h-[300px] 2xl:h-[600px]  border-b-4 py-5  border-black bg-black w-full flex justify-center items-center relative "
       >
-        <div className=" absolute select-none text-white text-2xl md:text-6xl font-bold  ">
+        <div className=" absolute select-none text-white text-2xl md:text-6xl hover:text-yellow-200 duration-300 font-bold  ">
           Skills
         </div>
       </div>

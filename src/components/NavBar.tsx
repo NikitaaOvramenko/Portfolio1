@@ -34,7 +34,7 @@ export default function NavBar() {
             </>
           ))}
         </div>
-        <div className="right flex flex-auto w-28 text-white justify-between">
+        <div className="right flex flex-auto w-28 text-white text-xs sm:text-base justify-between">
           {rightItems.map((item, index) => (
             <>
               <a

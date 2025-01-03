@@ -31,7 +31,7 @@ export default function Projects() {
             onClick={slideLeft}
           />
           <div className="absolute text-black text-2xl md:text-6xl font-bold z-0 w-full flex justify-center items-center">
-            Projects
+            {/* Projects */}
           </div>
 
           <div

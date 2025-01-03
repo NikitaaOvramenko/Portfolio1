@@ -33,28 +33,28 @@ export default function Contacts() {
   return (
     <div
       id="Contacts"
-      className="main contacts flex flex-col sm:flex-row w-full h-[400px] sm:h-full p-2 "
+      className="main  contacts flex flex-row-reverse overflow-x-auto scroll whitespace-nowrap w-full h-auto sm:justify-center snap-x snap-mandatory p-2 "
     >
       {/* left */}
-      <div className="left flex flex-row sm:flex-col  w-full md:w-1/2 h-[300px] sm:h-full gap-3 py-2 items-center ">
-        <div className="text-3xl sm:text-4xl text-center font-bold w-1/2 sm:w-auto ">
+      <div className="left flex flex-col snap-center w-[500px]  gap-3 flex-shrink-0   ">
+        <div className="text-3xl sm:text-4xl text-center font-bold w-full ">
           My Location
         </div>
         <iframe
-          className="border-black flex-auto border rounded-md md:w-[300px] w-1/2 md:h-[300px] h-[200px] self-center"
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=77%20mintwood%20road+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          className="border-black flex-auto border rounded-md  self-center"
+          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Thornhill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           allowFullScreen={true}
         ></iframe>
       </div>
 
       {/* right */}
 
-      <div className="right flex flex-row-reverse flex-row sm:flex-col w-full md:w-1/2 h-[400px] sm:h-full gap-3 items-center">
-        <div className="text-3xl sm:text-4xl flex-auto text-center font-bold w-1/2 sm:w-auto">
+      <div className="right flex  flex-col snap-center w-[500px]  gap-3 flex-shrink-0  ">
+        <div className="text-3xl sm:text-4xl  text-center font-bold w-full">
           Get in touch
         </div>
         <form
-          className="  w-1/2 sm:w-auto h-auto flex flex-col  items-center"
+          className="  w-full sm:w-auto h-auto flex flex-col  items-center justify-center"
           onSubmit={onSubmit}
         >
           <div className="flex  flex-col gap-3">
@@ -103,7 +103,10 @@ export default function Contacts() {
             ></textarea>
           </div>
 
-          <button className="subBut w-16 h-8" type="submit">
+          <button
+            className="subBut w-16 h-8 font-semibold active:scale-90 active:text-yellow-200 duration-300"
+            type="submit"
+          >
             Submit
           </button>
         </form>
