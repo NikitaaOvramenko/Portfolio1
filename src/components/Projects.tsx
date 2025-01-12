@@ -11,11 +11,10 @@ export default function Projects() {
   const [text, SetText] = useState("");
   const [pic, SetPic] = useState([""]);
 
-  const toggle = (name: string, text: string, pics: string[]) => {
+  const toggle = (name: string, text: string) => {
     setModal(!modal);
     SetName(name);
     SetText(text);
-    SetPic(pics);
   };
 
   const closeM = () => {
@@ -66,7 +65,7 @@ export default function Projects() {
           >
             {data.map((item) => (
               <button
-                onClick={() => toggle(item.name, item.text, item.img2)}
+                onClick={() => toggle(item.name, item.text)}
                 id={String(item.id)}
                 className=" w-[150px] h-[150px]  sm:w-[250px] sm:h-[250px] 2xl:w-[300px] 2xl:h-[300px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 text-xs sm:text-xl  ease-in-out duration-300  text-wrap justify-center items-center shrink-0"
               >

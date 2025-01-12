@@ -5,7 +5,6 @@ import amp from "../iconsProj/noise.png";
 import sketch from "../iconsProj/police.png";
 import calculator from "../iconsProj/calculator.png";
 import rock from "../iconsProj/fist.png";
-import Modal from "../components/Modal";
 
 export const data = [
   {
@@ -13,12 +12,14 @@ export const data = [
     name: "Home Server",
     img: eyeS,
     text: "1",
+    // img2:[]
   },
   {
     id: 2,
     name: "Small Bank App",
     img: bank,
     text: "2",
+    // img2:[]
   },
 
   {
@@ -26,6 +27,7 @@ export const data = [
     name: "CPU Design",
     img: cpu,
     text: "3",
+    // img2:[]
   },
 
   {
@@ -33,6 +35,7 @@ export const data = [
     name: "BJT Amplifier Design",
     img: amp,
     text: "4",
+    // img2:[]
   },
 
   {
@@ -41,6 +44,7 @@ export const data = [
     img: sketch,
     text: "5",
     link: "",
+    // img2:[]
   },
 
   {
@@ -49,6 +53,7 @@ export const data = [
     img: calculator,
     text: "6",
     link: "",
+    // img2:[]
   },
 
   {
@@ -57,5 +62,6 @@ export const data = [
     img: rock,
     text: "",
     link: "",
+    // img2:[]
   },
 ];
