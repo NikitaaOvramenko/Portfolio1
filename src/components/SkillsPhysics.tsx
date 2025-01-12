@@ -64,7 +64,7 @@ export default function Physics() {
   const engine = useRef(Engine.create());
   const { width: windowWidth } = useWindowDimensions();
   const [curWid, SetWid] = useState(1000);
-  const [curHei, SetHei] = useState(300);
+  const [curHei, SetHei] = useState(280);
 
   const text = document.createElement("div");
 
@@ -81,7 +81,7 @@ export default function Physics() {
       }
     } else {
       SetWid(1000);
-      SetHei(300);
+      SetHei(280);
     }
   }, [windowWidth]);
 
@@ -167,7 +167,7 @@ export default function Physics() {
       <div
         id="Skills"
         ref={scene}
-        className="main skills  h-[250px] sm:h-[300px] 2xl:h-[600px]  border-b-4 py-5  border-black bg-black w-full flex justify-center items-center relative "
+        className="main skills  h-[250px] sm:h-[300px] 2xl:h-[600px]  border-b-2 py-5  border-white bg-black w-full flex justify-center items-center relative "
       >
         <div className=" absolute select-none text-white text-2xl md:text-6xl hover:text-yellow-200 duration-300 font-bold  ">
           Skills

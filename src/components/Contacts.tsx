@@ -33,7 +33,7 @@ export default function Contacts() {
   return (
     <div
       id="Contacts"
-      className="main  contacts flex  overflow-x-auto scroll whitespace-nowrap w-full h-auto sm:justify-center snap-x snap-mandatory  p-2 "
+      className="main bg-black  contacts flex text-white  overflow-x-auto scroll whitespace-nowrap w-full h-auto sm:justify-center snap-x snap-mandatory  p-2 "
     >
       {/* left */}
 
@@ -51,7 +51,7 @@ export default function Contacts() {
               name="name"
               placeholder="Name:"
               type="text"
-              className="w-[300px]   h-8 border-b-2  px-2 border-black focus:outline-none"
+              className="w-[300px]   h-8 border-b-2  px-2 border-white bg-black focus:outline-none"
               required
             />
           </div>
@@ -61,7 +61,7 @@ export default function Contacts() {
               name="email"
               placeholder="Email:"
               type="email"
-              className="w-[300px]  h-8 border-b-2 px-2 border-black focus:outline-none"
+              className="w-[300px]  h-8 border-b-2 px-2 border-white bg-black focus:outline-none"
               required
             />
           </div>
@@ -73,7 +73,7 @@ export default function Contacts() {
             ></label>
             <textarea
               name="message"
-              className="message border-2 border-black px-2 pt-1 focus:outline-none rounded resize-none "
+              className="message border-2 border-white bg-black px-2 pt-1 focus:outline-none rounded resize-none "
               cols={33}
               rows={5}
               required
