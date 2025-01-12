@@ -9,7 +9,7 @@ export default function Projects() {
   const [modal, setModal] = useState(false);
   const [name, SetName] = useState("");
   const [text, SetText] = useState("");
-  const [pic, SetPic] = useState([""]);
+  // const [pic, SetPic] = useState([""]);
 
   const toggle = (name: string, text: string) => {
     setModal(!modal);
@@ -45,7 +45,7 @@ export default function Projects() {
           name={name}
           text={text}
           bool={modal}
-          pics={pic}
+          pics={[]}
           closeM={closeM}
         ></Modal>
         ;
