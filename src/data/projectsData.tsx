@@ -41,6 +41,14 @@ import cp3 from "../projectPics/CPU/cpu3.png";
 import cp4 from "../projectPics/CPU/cpu4.png";
 import cp5 from "../projectPics/CPU/cpu5.png";
 
+//Amplifier
+
+import amp1 from "../projectPics/Amplifier/amp1.png";
+import amp2 from "../projectPics/Amplifier/amp2.png";
+import amp3 from "../projectPics/Amplifier/amp3.png";
+import amp4 from "../projectPics/Amplifier/amp4.png";
+import amp5 from "../projectPics/Amplifier/amp5.png";
+
 const template1 = (
   description: string,
   facts: string[],
@@ -191,14 +199,20 @@ export const data = [
     name: "BJT Amplifier Design",
     img: amp,
     text: template1(
-      "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
-      ["gay", "gay2"],
-      ["JavaScript", "HTML", "CSS"],
-      [],
-      [],
-      []
+      "This project focuses on designing and analyzing a 3-stage BJT amplifier (CE-CE-CC configuration) to meet specific performance requirements. The amplifier is designed for applications requiring high gain, minimal distortion, and optimized frequency response. The circuit design ensures accurate biasing and employs components for efficient signal amplification and stability.",
+      [
+        "The 3-stage configuration includes two common-emitter (CE) amplifiers for gain and one common-collector (CC) amplifier for buffering and signal integrity.",
+        "Designed to meet specifications such as quiescent current under 10mA, no-load voltage gain of approximately 50, and frequency response from 20 Hz to 50 kHz.",
+        "Uses shunt capacitors to mitigate emitter degeneration and improve gain, while coupling capacitors act as high-pass filters to block DC components.",
+        "Extensive manual calculations were performed to determine optimal biasing points, resistor, and capacitor values, ensuring compliance with design requirements.",
+        "Testing through simulation verified performance metrics, with most specifications met except for output voltage swing due to potential biasing and Q-point decisions.",
+      ],
+      ["None"],
+      ["None"],
+      ["None"],
+      ["Multisim"]
     ),
-    img2: [""],
+    img2: [amp1, amp2, amp3, amp4, amp5],
   },
 
   {
@@ -281,19 +295,19 @@ export const data = [
     img2: [calc1, calc2],
   },
 
-  {
-    id: 7,
-    name: "Paper-Rock-Scissors",
-    img: rock,
-    text: template1(
-      "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
-      ["gay", "gay2"],
-      ["JavaScript", "HTML", "CSS"],
-      [],
-      [],
-      []
-    ),
-    link: "",
-    img2: [""],
-  },
+  // {
+  //   id: 7,
+  //   name: "Paper-Rock-Scissors",
+  //   img: rock,
+  //   text: template1(
+  //     "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
+  //     ["gay", "gay2"],
+  //     ["JavaScript", "HTML", "CSS"],
+  //     [],
+  //     [],
+  //     []
+  //   ),
+  //   link: "",
+  //   img2: [""],
+  // },
 ];
