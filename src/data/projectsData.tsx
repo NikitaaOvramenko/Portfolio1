@@ -33,7 +33,7 @@ const template1 = (
   return (
     <section
       id="project-template"
-      className=" flex p-2 flex-col bg-black project overflow-scroll"
+      className="    p-2 flex-col bg-black project "
     >
       <h1 className="project-title"></h1>
 

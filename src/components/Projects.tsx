@@ -50,7 +50,6 @@ export default function Projects() {
           pics={pic}
           closeM={closeM}
         ></Modal>
-        ;
         <div className="projects  flex items-center  w-full h-full ">
           <MdChevronLeft
             size={40}
