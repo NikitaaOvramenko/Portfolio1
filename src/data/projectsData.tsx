@@ -22,6 +22,25 @@ import bank3 from "../projectPics/BankApp/Bank3.png";
 import bank4 from "../projectPics/BankApp/Bank4.png";
 import bank5 from "../projectPics/BankApp/Bank5.png";
 
+//Sketch
+
+import sk1 from "../projectPics/Etch-Sketch/sk1.png";
+import sk2 from "../projectPics/Etch-Sketch/sk2.png";
+import sk3 from "../projectPics/Etch-Sketch/sk3.png";
+
+//calc
+
+import calc1 from "../projectPics/Calculator/calc1.png";
+import calc2 from "../projectPics/Calculator/calc2.png";
+
+//cpu
+
+import cp1 from "../projectPics/CPU/cpu1.png";
+import cp2 from "../projectPics/CPU/cpu2.png";
+import cp3 from "../projectPics/CPU/cpu3.png";
+import cp4 from "../projectPics/CPU/cpu4.png";
+import cp5 from "../projectPics/CPU/cpu5.png";
+
 const template1 = (
   description: string,
   facts: string[],
@@ -147,14 +166,24 @@ export const data = [
     name: "CPU Design",
     img: cpu,
     text: template1(
-      "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
-      ["gay", "gay2"],
-      ["JavaScript", "HTML", "CSS"],
-      [],
-      [],
-      []
+      "This project focuses on designing and implementing a simplified general-purpose processor. It integrates key components such as latches, a finite state machine (FSM), a 4:16 decoder, and an arithmetic logic unit (ALU). The processor demonstrates the coordination of these components to execute various operations, with modular and scalable architecture suitable for educational and experimental purposes.",
+      [
+        "Utilizes two gated D latch registers for binary inputs A and B, with reset and clock functionality for data storage.",
+        "Implements a positive-edge triggered Moore finite state machine (FSM) that cycles through states based on input conditions.",
+        "A 4:16 decoder translates FSM outputs into binary representations for further processing.",
+        "ALU performs multiple arithmetic and logical operations, including addition, subtraction, shifting, and complementing, based on microcoded instructions.",
+        "Supports state-based dynamic behavior, leveraging a modular design that includes components for rank transitions and additional functionalities.",
+        "Circuit behavior verified through simulation waveforms and truth tables, ensuring accuracy across multiple configurations.",
+      ],
+      [
+        "Verilog/VHDL (for circuit design)",
+        "Assembly-like microcode for ALU operations.",
+      ],
+      ["None"],
+      ["None"],
+      ["Quartus"]
     ),
-    img2: [""],
+    img2: [cp1, cp2, cp3, cp4, cp5],
   },
 
   {
@@ -176,32 +205,80 @@ export const data = [
     id: 5,
     name: "Etch-a-Sketch",
     img: sketch,
-    text: template1(
-      "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
-      ["gay", "gay2"],
-      ["JavaScript", "HTML", "CSS"],
-      [],
-      [],
-      []
+    text: (
+      <div className="flex flex-col ">
+        {template1(
+          "The Etch-a-Sketch(One of my first web dev projects!) is a browser-based drawing application inspired by the classic toy. It allows users to create pixel art through an interactive and intuitive grid interface. The application focuses on simplicity and functionality, providing users with customizable grid sizes and dynamic drawing features.",
+          [
+            "Users can draw by hovering over a grid, simulating the experience of an Etch-a-Sketch.",
+            "The grid size is adjustable, allowing for varying levels of detail in drawings.",
+            "A reset button clears the canvas, enabling users to start over easily.",
+            "Designed with responsive features, making it accessible across different screen sizes.",
+            "The application utilizes DOM manipulation to dynamically generate and update the grid in real time.",
+          ],
+          ["JavaScript", "HTML", "CSS"],
+          ["None"],
+          ["None"],
+          ["VS Code"]
+        )}
+
+        <h2 className="p-2 text-yellow-200">
+          <strong>Demo:</strong>
+        </h2>
+        <iframe
+          className="w-{75%} h-full shrink-0 self-center p-2 border border-white scale-75"
+          src="https://nikitaaovramenko.github.io/Etch-a-Sketch/"
+          name="targetframe"
+          frameBorder={0}
+          width={500}
+          height={500}
+          allowTransparency={true}
+          scrolling="yes"
+        ></iframe>
+      </div>
     ),
     link: "",
-    img2: [""],
+    img2: [sk1, sk2, sk3],
   },
 
   {
     id: 6,
     name: "Calculator",
     img: calculator,
-    text: template1(
-      "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
-      ["gay", "gay2"],
-      ["JavaScript", "HTML", "CSS"],
-      [],
-      [],
-      []
+    text: (
+      <div className="flex flex-col ">
+        {template1(
+          "The Calculator is a simple, browser-based application designed to perform basic arithmetic operations. It provides a clean and intuitive interface, ensuring accessibility and ease of use. The calculator supports operations like addition, subtraction, multiplication, and division, along with a clear button to reset the calculations.",
+          [
+            "Users can perform real-time calculations directly in the browser.",
+            "The calculator features buttons for digits, basic arithmetic operators, and a clear/reset option.",
+            "The result updates dynamically as users input numbers and operations.",
+            "Built with responsive design principles to ensure usability across different devices and screen sizes.",
+            "Implements DOM manipulation to handle user interactions and display real-time results.",
+          ],
+          ["JavaScript", "HTML", "CSS"],
+          ["None"],
+          ["None"],
+          ["VS Code"]
+        )}
+
+        <h2 className="p-2 text-yellow-200">
+          <strong>Demo:</strong>
+        </h2>
+        <iframe
+          className="w-{75%} h-full shrink-0 self-center p-2 border border-white scale-75"
+          src="https://nikitaaovramenko.github.io/Calculator/"
+          name="targetframe"
+          frameBorder={0}
+          width={500}
+          height={500}
+          allowTransparency={true}
+          scrolling="yes"
+        ></iframe>
+      </div>
     ),
     link: "",
-    img2: [""],
+    img2: [calc1, calc2],
   },
 
   {

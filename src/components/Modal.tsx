@@ -26,7 +26,7 @@ export default function Modal(props: ModalProps) {
         <div className="  w-full flex h-full items-center  overflow-x-scroll snap-x overflow-y-hidden scroll shrink-0  ">
           {props.pics.map((pic) => (
             <img
-              className="  w-full h-auto scale-60 snap-center scale-[0.65]  duration-300 shrink-0"
+              className="  w-full h-auto scale-60 snap-center scale-[0.6]  duration-300 shrink-0"
               key={pic}
               src={pic}
               alt="Image"
