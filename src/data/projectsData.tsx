@@ -4,7 +4,8 @@ import eyeS from "../iconsProj/eye-sensor.png";
 import amp from "../iconsProj/noise.png";
 import sketch from "../iconsProj/police.png";
 import calculator from "../iconsProj/calculator.png";
-import rock from "../iconsProj/fist.png";
+import port from "../iconsProj/resume.png";
+// import rock from "../iconsProj/fist.png";
 
 // images
 
@@ -130,7 +131,7 @@ export const data = [
   {
     id: 1,
     name: "Portfolio",
-    img: eyeS,
+    img: port,
     text: template1(
       "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map. The portfolio is built using modern web technologies, demonstrating advanced React and TypeScript capabilities, with Tailwind CSS for styling and responsiveness.",
       [
