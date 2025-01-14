@@ -1,6 +1,6 @@
 import bank from "../iconsProj/bank.png";
 import cpu from "../iconsProj/cpu.png";
-import eyeS from "../iconsProj/eye-sensor.png";
+// import eyeS from "../iconsProj/eye-sensor.png";
 import amp from "../iconsProj/noise.png";
 import sketch from "../iconsProj/police.png";
 import calculator from "../iconsProj/calculator.png";
@@ -172,7 +172,7 @@ export const data = [
 
   {
     id: 3,
-    name: "CPU Design",
+    name: "Simple CPU Design",
     img: cpu,
     text: template1(
       "This project focuses on designing and implementing a simplified general-purpose processor. It integrates key components such as latches, a finite state machine (FSM), a 4:16 decoder, and an arithmetic logic unit (ALU). The processor demonstrates the coordination of these components to execute various operations, with modular and scalable architecture suitable for educational and experimental purposes.",
