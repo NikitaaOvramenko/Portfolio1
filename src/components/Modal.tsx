@@ -50,7 +50,7 @@ export default function Modal(props: ModalProps) {
             {" "}
             <div
               id="slider2"
-              className="  w-full flex  items-center  overflow-x-scroll scroll-smooth snap-x overflow-y-hidden scroll shrink-0  "
+              className="  w-full h-[400px] flex  items-center  overflow-x-scroll scroll-smooth snap-x overflow-y-hidden scroll shrink-0  "
             >
               {props.pics.map((pic) => (
                 <img
