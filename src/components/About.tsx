@@ -16,14 +16,13 @@ export default function About() {
           </span>
         </p>
         <p>
-          I'm a versatile developer with expertise in web development,
-          microcontroller programming, and system design. With a strong
-          foundation in HTML, CSS, JavaScript, and React, I build user-friendly
-          web applications while also working on projects like configuring
-          Raspberry Pi servers, programming MC9S12C32 microcontrollers, and
-          creating Telegram bots with MongoDB. My curiosity drives me to explore
-          new technologies, solve complex problems, and deliver innovative
-          solutions. Let's connect and create something exceptional!
+          I'm a software developer with expertise in web development, embedded
+          systems, and digital design. Proficient in Java, Python, and C/C++, I
+          build interactive web applications using React and develop scalable
+          backend solutions. My experience includes working with Raspberry Pi
+          servers, designing chat applications, and creating Telegram bots with
+          MongoDB. Passionate about problem-solving and system optimization, I
+          strive to develop innovative and efficient solutions.
         </p>
       </div>
     </div>

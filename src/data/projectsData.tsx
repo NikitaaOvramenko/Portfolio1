@@ -1,13 +1,16 @@
 import bank from "../iconsProj/bank.png";
 import cpu from "../iconsProj/cpu.png";
-// import eyeS from "../iconsProj/eye-sensor.png";
 import amp from "../iconsProj/noise.png";
 import sketch from "../iconsProj/police.png";
 import calculator from "../iconsProj/calculator.png";
 import port from "../iconsProj/resume.png";
-// import rock from "../iconsProj/fist.png";
+import chat from "../iconsProj/comments.png";
 
 // images
+
+//status
+import done from "../icons/accept.png";
+import ongoing from "../icons/circular.png";
 
 //portf
 
@@ -49,6 +52,10 @@ import amp2 from "../projectPics/Amplifier/amp2.png";
 import amp3 from "../projectPics/Amplifier/amp3.png";
 import amp4 from "../projectPics/Amplifier/amp4.png";
 import amp5 from "../projectPics/Amplifier/amp5.png";
+
+//Chat
+
+import chat1 from "../projectPics/ChatApp/chatPic.png";
 
 const template1 = (
   description: string,
@@ -120,13 +127,29 @@ const template1 = (
 };
 
 export const data = [
-  // {
-  //   id: 1,
-  //   name: "Home Server",
-  //   img: eyeS,
-  //   text: "1",
-  //   img2: [""],
-  // },
+  {
+    id: 1,
+    name: "Chat Application",
+    img: chat,
+    text: template1(
+      "The Chat Application is a real-time messaging platform designed for seamless communication. It features a custom-built server using Java Sockets and a JavaFX-based client application. The application allows multiple users to join various channels and communicate efficiently. The server is optimized for scalability and maintainability using the State Design Pattern and is designed to run in a Docker container on a Raspberry Pi 4.",
+      [
+        "Real-Time Messaging: Enables users to send and receive messages instantly in different channels.",
+        "Custom Server Implementation: Built from scratch using Java Sockets for efficient networking.",
+        "State Management: Uses the State Design Pattern to handle different server states dynamically.",
+        "Cross-Platform Client: Developed using JavaFX, ensuring smooth user interaction and accessibility.",
+        "Containerized Deployment: Runs in a Docker container, making it scalable and portable.",
+        "Secure Communication: Implements authentication and encryption techniques for data security.",
+      ],
+      ["Java", "JavaFX"],
+      ["Docker"],
+      ["Java Sockets", "State Design Pattern"],
+      ["Intellij", "Git", "Linux", "Raspberry Pi 4"]
+    ),
+    img2: [chat1],
+
+    status: ongoing,
+  },
 
   {
     id: 1,
@@ -147,6 +170,8 @@ export const data = [
       ["VS Code", "Git", "Linux"]
     ),
     img2: [port1, port2, port3],
+
+    status: done,
   },
   {
     id: 2,
@@ -168,6 +193,7 @@ export const data = [
       ["NetBeans"]
     ),
     img2: [bank1, bank2, bank3, bank4, bank5],
+    status: done,
   },
 
   {
@@ -193,6 +219,7 @@ export const data = [
       ["Quartus"]
     ),
     img2: [cp1, cp2, cp3, cp4, cp5],
+    status: done,
   },
 
   {
@@ -214,6 +241,7 @@ export const data = [
       ["Multisim"]
     ),
     img2: [amp1, amp2, amp3, amp4, amp5],
+    status: done,
   },
 
   {
@@ -254,6 +282,7 @@ export const data = [
     ),
     link: "",
     img2: [sk1, sk2, sk3],
+    status: done,
   },
 
   {
@@ -294,21 +323,6 @@ export const data = [
     ),
     link: "",
     img2: [calc1, calc2],
+    status: done,
   },
-
-  // {
-  //   id: 7,
-  //   name: "Paper-Rock-Scissors",
-  //   img: rock,
-  //   text: template1(
-  //     "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map.",
-  //     ["gay", "gay2"],
-  //     ["JavaScript", "HTML", "CSS"],
-  //     [],
-  //     [],
-  //     []
-  //   ),
-  //   link: "",
-  //   img2: [""],
-  // },
 ];

@@ -7,6 +7,8 @@ import typescIMG from "../sprites/typescript.png";
 import htmlIMG from "../sprites/html-5.png";
 import cIMG from "../sprites/letter-c.png";
 import sharpIMG from "../sprites/c-sharp.png";
+import dockerIMG from "../sprites/docker.png";
+import piIMG from "../sprites/raspberry-pi.png";
 
 export const ballzData = [
   {
@@ -66,6 +68,18 @@ export const ballzData = [
     id: 9,
     img: sharpIMG,
     name: "C#",
+    shape: "c",
+  },
+  {
+    id: 10,
+    img: dockerIMG,
+    name: "Docker",
+    shape: "c",
+  },
+  {
+    id: 10,
+    img: piIMG,
+    name: "Raspberry pi 4",
     shape: "c",
   },
 ];
