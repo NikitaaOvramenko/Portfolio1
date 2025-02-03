@@ -62,7 +62,7 @@ export default function Projects() {
           </div>
           <div
             id="slider"
-            className=" flex   items-center justify-center  w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
+            className=" flex   items-center   w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
           >
             {data.map((item) => (
               <button
