@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+🚀 Nikita Ovramenko - Portfolio
+Welcome to my personal portfolio, where I showcase my projects, skills, and experience in web development, embedded systems, and software engineering.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔹 About Me
+I'm a software developer proficient in Java, Python, and C/C++, specializing in React, TypeScript, and backend development. My experience includes:
 
-Currently, two official plugins are available:
+Building scalable web applications with React and TypeScript.
+Developing backend systems and working with databases like MongoDB.
+Networking and system architecture, including Raspberry Pi servers and Dockerized applications.
+Creating chat applications and Telegram bots with real-time communication.
+📌 Projects
+Some highlights from my portfolio:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔹 Chat Application – A real-time messaging app using Java Sockets, JavaFX, and Docker.
+🔹 Personal Portfolio Website – An interactive, responsive site built with React and Tailwind CSS.
+🔹 Small Bank App – A Java-based application with user authentication and transaction management.
+🌐 Live Portfolio
+📌 Check out my portfolio website: Click Here
 
-## Expanding the ESLint configuration
+📫 Contact Me
+Want to collaborate or discuss opportunities?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+LinkedIn: LinkedIn Profile
+GitHub: GitHub Profile
+Email: nikita.ovramenko@torontomu.ca
