@@ -58,6 +58,8 @@ import amp5 from "../projectPics/Amplifier/amp5.png";
 import chat1 from "../projectPics/ChatApp/chatPic.png";
 
 const template1 = (
+  bool: boolean,
+  status: string,
   description: string,
   facts: string[],
   lang: string[],
@@ -71,6 +73,11 @@ const template1 = (
       className="    p-2 flex-col bg-black project "
     >
       <h1 className="project-title"></h1>
+
+      <section className="text-end">
+        Status: {status}
+        {bool ? "✅" : "✨"}
+      </section>
 
       {/* <!-- Description Section --> */}
       <section className="project-description">
@@ -132,6 +139,8 @@ export const data = [
     name: "Chat Application",
     img: chat,
     text: template1(
+      false,
+      "ongoing",
       "The Chat Application is a real-time messaging platform designed for seamless communication. It features a custom-built server using Java Sockets and a JavaFX-based client application. The application allows multiple users to join various channels and communicate efficiently. The server is optimized for scalability and maintainability using the State Design Pattern and is designed to run in a Docker container on a Raspberry Pi 4.",
       [
         "Real-Time Messaging: Enables users to send and receive messages instantly in different channels.",
@@ -156,6 +165,8 @@ export const data = [
     name: "Portfolio",
     img: port,
     text: template1(
+      true,
+      " done",
       "This portfolio project is a dynamic and interactive platform designed to showcase personal projects, skills, and achievements. It features a visually appealing and responsive layout, providing an engaging user experience. The portfolio highlights key projects with detailed descriptions and images in an interactive carousel format, while also offering contact functionality through a form and integrated map. The portfolio is built using modern web technologies, demonstrating advanced React and TypeScript capabilities, with Tailwind CSS for styling and responsiveness.",
       [
         "Dynamic Project Display: Projects are showcased in a smooth, scrollable carousel with modals for detailed views.",
@@ -178,6 +189,8 @@ export const data = [
     name: "Small Bank App",
     img: bank,
     text: template1(
+      true,
+      "done",
       "The BankApp is a Java-based application designed to simulate basic banking functionalities for both customers and managers. It provides a user-friendly interface built with JavaFX and Scene Builder, offering a visually appealing and intuitive experience. The app implements robust features for user management, account handling, and state-based actions, ensuring flexibility and scalability.",
       [
         "Role-based access allows customers to perform actions such as checking balance, withdrawing money, depositing money, and making purchases, while managers can add or remove customer accounts.",
@@ -201,6 +214,8 @@ export const data = [
     name: "Simple CPU Design",
     img: cpu,
     text: template1(
+      true,
+      "done",
       "This project focuses on designing and implementing a simplified general-purpose processor. It integrates key components such as latches, a finite state machine (FSM), a 4:16 decoder, and an arithmetic logic unit (ALU). The processor demonstrates the coordination of these components to execute various operations, with modular and scalable architecture suitable for educational and experimental purposes.",
       [
         "Utilizes two gated D latch registers for binary inputs A and B, with reset and clock functionality for data storage.",
@@ -227,6 +242,8 @@ export const data = [
     name: "BJT Amplifier Design",
     img: amp,
     text: template1(
+      true,
+      "done",
       "This project focuses on designing and analyzing a 3-stage BJT amplifier (CE-CE-CC configuration) to meet specific performance requirements. The amplifier is designed for applications requiring high gain, minimal distortion, and optimized frequency response. The circuit design ensures accurate biasing and employs components for efficient signal amplification and stability.",
       [
         "The 3-stage configuration includes two common-emitter (CE) amplifiers for gain and one common-collector (CC) amplifier for buffering and signal integrity.",
@@ -251,6 +268,8 @@ export const data = [
     text: (
       <div className="flex flex-col ">
         {template1(
+          true,
+          "done",
           "The Etch-a-Sketch(One of my first web dev projects!) is a browser-based drawing application inspired by the classic toy. It allows users to create pixel art through an interactive and intuitive grid interface. The application focuses on simplicity and functionality, providing users with customizable grid sizes and dynamic drawing features.",
           [
             "Users can draw by hovering over a grid, simulating the experience of an Etch-a-Sketch.",
@@ -292,6 +311,8 @@ export const data = [
     text: (
       <div className="flex flex-col ">
         {template1(
+          true,
+          "done",
           "The Calculator is a simple, browser-based application designed to perform basic arithmetic operations. It provides a clean and intuitive interface, ensuring accessibility and ease of use. The calculator supports operations like addition, subtraction, multiplication, and division, along with a clear button to reset the calculations.",
           [
             "Users can perform real-time calculations directly in the browser.",

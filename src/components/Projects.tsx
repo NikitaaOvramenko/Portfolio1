@@ -62,7 +62,7 @@ export default function Projects() {
           </div>
           <div
             id="slider"
-            className=" flex   items-center  w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
+            className=" flex   items-center justify-center  w-full h-full overflow-x-scroll  relative z-10 scroll whitespace-nowrap scroll-smooth "
           >
             {data.map((item) => (
               <button
@@ -77,6 +77,10 @@ export default function Projects() {
                   className="  w-[100px] h-[100px]  sm:w-[180px] sm:h-[180px] 2xl:w-[160px] 2xl:h-[160px] pt-3 "
                   src={item.img}
                 ></img>
+                {/* <img
+                  className="w-[40px] h-[50px]  sm:w-[80px] sm:h-[90px] 2xl:w-[70px] 2xl:h-[80px] pt-3 shrink-0"
+                  src={item.status}
+                ></img> */}
               </button>
             ))}
           </div>
