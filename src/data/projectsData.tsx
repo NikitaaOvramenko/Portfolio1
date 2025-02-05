@@ -74,7 +74,7 @@ const template1 = (
     >
       <h1 className="project-title"></h1>
 
-      <section className="text-end">
+      <section className="text-end text-white">
         Status: {status}
         {bool ? "✅" : "✨"}
       </section>

@@ -10,6 +10,23 @@ html, body {
   
 }
 
+#Projects{
+  
+  background-color: white;
+  color:black;
+
+}
+
+#Contacts,.message{
+  background-color: white;
+  color: black;
+}
+
+.name,.email,.message{
+  background-color: white;
+  border-color: black;
+}
+
 html{
   scroll-behavior: smooth;
 }

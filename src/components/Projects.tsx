@@ -41,7 +41,7 @@ export default function Projects() {
     <>
       <div
         id="Projects"
-        className=" bg-black  h-[250px] sm:h-[300px] 2xl:h-[600px]  flex  flex-col justify-center border-b-2 border-white  text-white relative "
+        className="   h-[250px] sm:h-[300px] 2xl:h-[600px]  flex  flex-col justify-center border-b-2 border-white  text-white relative "
       >
         <Modal
           name={name}
