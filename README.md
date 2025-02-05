@@ -15,11 +15,11 @@ Some highlights from my portfolio:
 🔹 Personal Portfolio Website – An interactive, responsive site built with React and Tailwind CSS.
 🔹 Small Bank App – A Java-based application with user authentication and transaction management.
 🌐 Live Portfolio
-📌 Check out my portfolio website: Click Here
+📌 Check out my portfolio website: https://nikitaaovramenko.github.io/Portfolio1/
 
 📫 Contact Me
 Want to collaborate or discuss opportunities?
 
-LinkedIn: LinkedIn Profile
-GitHub: GitHub Profile
+LinkedIn: https://www.linkedin.com/in/nikita-ovramenko-9042b8251
+GitHub: https://github.com/NikitaaOvramenko
 Email: nikita.ovramenko@torontomu.ca
