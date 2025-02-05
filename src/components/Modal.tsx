@@ -44,7 +44,7 @@ export default function Modal(props: ModalProps) {
             <>
               <MdChevronLeft
                 size={40}
-                className="hover:scale-105 shrink-0 self-center ease-in-out active:scale-50 duration-300 relative"
+                className="hover:scale-105 shrink-0 self-center ease-in-out active:scale-50 duration-300 relative bg-black text-white"
                 onClick={slideLeft}
               />
 
@@ -65,7 +65,7 @@ export default function Modal(props: ModalProps) {
               </div>
 
               <MdChevronRight
-                className="hover:scale-105 shrink-0 self-center ease-in-out active:scale-50 duration-300 relative"
+                className="hover:scale-105 shrink-0 self-center ease-in-out bg-black text-white active:scale-50 duration-300 relative"
                 size={40}
                 onClick={sliderRight}
               />
