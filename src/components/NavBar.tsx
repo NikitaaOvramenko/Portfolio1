@@ -1,7 +1,7 @@
 import git from "../icons/github.png";
 import inst from "../icons/instagram.png";
 import gmail from "../icons/gmail.png";
-import resume from "../pdfs/Nikita_s_Resume_ext___Copy_-1.pdf";
+import resume from "../pdfs/Nikita's Resume1.pdf";
 
 export default function NavBar() {
   const rightItems = ["Resume", "Projects", "Skills", "Contacts"];
