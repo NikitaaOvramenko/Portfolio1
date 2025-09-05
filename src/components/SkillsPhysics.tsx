@@ -167,9 +167,9 @@ export default function Physics() {
       <div
         id="Skills"
         ref={scene}
-        className="main skills h-[600px] py-5 bg-black w-full flex justify-center items-center relative shadow-xl overflow-hidden"
+        className="main skills h-[700px] py-5 bg-black w-full flex justify-center items-center relative shadow-xl overflow-hidden"
       >
-        <div className=" absolute select-none text-2xl md:text-6xl font-bold  bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+        <div className=" absolute select-none text-3xl sm:text-4xl md:text-6xl font-bold  bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           Skills
         </div>
       </div>

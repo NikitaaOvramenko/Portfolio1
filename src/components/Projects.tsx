@@ -43,7 +43,7 @@ export default function Projects() {
     <>
       <div
         id="Projects"
-        className="h-[600px] flex flex-col justify-center text-white relative bg-gradient-to-r from-violet-100 via-violet-300 to-violet-100 overflow-hidden"
+        className="h-[700px] flex flex-col justify-center text-white relative bg-gradient-to-r from-violet-100 via-violet-300 to-violet-100 overflow-hidden"
       >
         <Modal
           name={name}
@@ -59,7 +59,7 @@ export default function Projects() {
             onClick={slideLeft}
           />
 
-          <div className="absolute text-2xl md:text-6xl  z-10 w-full flex justify-center items-center  text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-purple-400  to-black ">
+          <div className="absolute text-3xl sm:text-4xl md:text-6xl  z-10 w-full flex justify-center items-center  text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-purple-400  to-black ">
             Projects
           </div>
           <div
@@ -82,7 +82,7 @@ export default function Projects() {
                     key={item.id}
                     onClick={() => toggle(item.name, item.text, item.img2)}
                     id={String(item.id)}
-                    className=" w-[150px] h-[150px]  sm:w-[250px] sm:h-[250px] 2xl:w-[300px] 2xl:h-[300px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 text-xs sm:text-xl  ease-in-out duration-300  text-wrap justify-center items-center shrink-0 bg-none rounded-lg  transition-all"
+                    className=" w-[150px] h-[150px]  sm:w-[250px] sm:h-[250px] 2xl:w-[300px] 2xl:h-[300px] inline-flex flex-col inline-block text-center font-bold p-2 cursor-pointer hover:scale-105 text-sm sm:text-xl  ease-in-out duration-300  text-wrap justify-center items-center shrink-0 bg-none rounded-lg  transition-all"
                   >
                     <div>{item.name}</div>
                     {/* <Modal name={item.name} text={item.text}></Modal> */}

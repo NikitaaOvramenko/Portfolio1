@@ -33,11 +33,11 @@ export default function Contacts() {
   return (
     <div
       id="Contacts"
-      className="bg-black h-[600px] flex flex-col lg:flex-row relative overflow-hidden"
+      className="bg-black h-[700px] flex flex-row relative overflow-x-scroll overflow-y-hidden"
     >
       {/* Contact Form Section */}
-      <div className="flex-1 bg-black p-8 flex flex-col items-center justify-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+      <div className="min-w-full lg:min-w-0 lg:flex-1 bg-black p-8 flex flex-col items-center justify-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           Get in touch
         </h2>
 
@@ -84,8 +84,8 @@ export default function Contacts() {
       </div>
 
       {/* Map Section */}
-      <div className="flex-1 bg-black p-8 flex flex-col items-center justify-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+      <div className="min-w-full lg:min-w-0 lg:flex-1 bg-black p-8 flex flex-col items-center justify-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           My Location
         </h2>
 
