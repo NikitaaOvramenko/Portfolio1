@@ -1,7 +1,7 @@
 // Types you can reuse elsewhere
 
 import tcsIcon from "../iconsProj/tcs_icon.png";
-import homeAssistantIcon from "../iconsProj/smart-house.png";
+// import homeAssistantIcon from "../iconsProj/smart-house.png";
 
 // TCS-Paints images
 import tcs1 from "../projectPics/TCS-Paints/1.png";
@@ -76,4 +76,20 @@ export const experiences: Experience[] = [
     ],
     link: "https://tcs-paints.vercel.app/",
   },
+  // {
+  //   id: 2,
+  //   company: "Pine Smart Solutions",
+  //   role: "Smart Home Developer",
+  //   start: "Nov 2023",
+  //   end: "Present",
+  //   location: "Toronto, ON",
+  //   logo: homeAssistantIcon,
+  //   tech: ["Home Assistant", "Zigbee/Z-Wave", "Python", "Docker"],
+  //   bullets: [
+  //     "Deployed YAML-mode dashboards; onboarded 10+ devices (Somfy, DoorBird, Zigbee).",
+  //     "Automated scene controls; cut average setup time per home by ~25%.",
+  //     "Documented client hand-off playbooks; reduced support tickets by ~30%.",
+  //   ],
+  //   gallery: [], // No gallery images available
+  // },
 ];
