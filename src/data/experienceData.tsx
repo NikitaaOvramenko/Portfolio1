@@ -2,7 +2,6 @@
 
 import tcsIcon from "../iconsProj/tcs_icon.png";
 import homeAssistantIcon from "../iconsProj/smart-house.png";
-import pineLogo from "../iconsProj/tcs_icon.png"; // Using TCS icon as placeholder for Pine Smart Solutions
 
 // TCS-Paints images
 import tcs1 from "../projectPics/TCS-Paints/1.png";
