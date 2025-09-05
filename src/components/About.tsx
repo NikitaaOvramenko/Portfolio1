@@ -1,11 +1,20 @@
-import Face from "../iconsProj/face.png";
+import Face from "../iconsProj/me.jpg";
 export default function About() {
   return (
     <div className="flex flex-col sm:flex-row h-[700px] w-full px-8 pt-8 pb-8 bg-black items-center shadow-xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-yellow-400/20 from-15% via-transparent via-40% to-transparent to-85%"></div>
       {/* left */}
       <div className="boxx left  w-full sm:w-1/2 flex justify-center items-center ">
-        <img className="max-w-full h-auto" src={Face} alt="Nikita Ovramenko" />
+        <div className="relative">
+          <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-purple-400/50 shadow-2xl bg-gradient-to-br from-purple-400/20 to-yellow-400/20 p-1">
+            <img
+              className="w-full h-full object-cover rounded-full"
+              src={Face}
+              alt="Nikita Ovramenko"
+            />
+          </div>
+          <div className="absolute inset-0 rounded-full border-2 border-white/30 shadow-inner"></div>
+        </div>
       </div>
 
       {/* right */}
