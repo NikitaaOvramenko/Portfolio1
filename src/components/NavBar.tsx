@@ -15,38 +15,38 @@ export default function NavBar() {
   const icons = [git, inst, gmail];
   return (
     <>
-      <div className="navbox flex flex-auto w-full h-16 bg-black p-1 ">
+      <div className="navbox flex flex-auto w-full h-16 bg-black p-1 shadow-lg">
         <div className="left flex flex-auto w-5">
           {icons.map((icon, index) => (
-            <>
-              <a
-                className="picBox flex mx-1 w-10 justify-center items-center"
-                target="_blank"
-                href={links[index]}
-              >
-                <div>
-                  <img
-                    src={icon}
-                    className="w-8 h-8 active:scale-50 duration-300"
-                  ></img>
-                </div>
-              </a>
-            </>
+            <a
+              key={`icon-${index}`}
+              className="picBox flex mx-1 w-10 justify-center items-center hover:bg-purple-600/20 rounded-lg transition-all duration-300"
+              target="_blank"
+              rel="noreferrer"
+              href={links[index]}
+            >
+              <div>
+                <img
+                  src={icon}
+                  alt={`Social media icon ${index + 1}`}
+                  className="w-8 h-8 active:scale-50 duration-300"
+                />
+              </div>
+            </a>
           ))}
         </div>
         <div className="right flex flex-auto w-28 text-white text-xs sm:text-base justify-between">
           {rightItems.map((item, index) => (
-            <>
-              <a
-                className="textBox flex flex-auto w-4 justify-center items-center hover:bg-white hover:text-black scale-105 transition-colors ease-in-out duration-300"
-                href={linksRight[index]}
-                download
-              >
-                <div>
-                  <div>{item}</div>
-                </div>
-              </a>
-            </>
+            <a
+              key={`nav-${index}`}
+              className="textBox flex flex-auto w-4 justify-center items-center hover:bg-purple-600 hover:text-white rounded-lg scale-105 transition-all ease-in-out duration-300 font-medium"
+              href={linksRight[index]}
+              download={index === 0 ? true : undefined}
+            >
+              <div>
+                <div>{item}</div>
+              </div>
+            </a>
           ))}
         </div>
       </div>

@@ -77,7 +77,7 @@ export const ballzData = [
     shape: "c",
   },
   {
-    id: 10,
+    id: 11,
     img: piIMG,
     name: "Raspberry pi 4",
     shape: "c",

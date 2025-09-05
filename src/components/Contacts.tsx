@@ -33,56 +33,49 @@ export default function Contacts() {
   return (
     <div
       id="Contacts"
-      className="main bg-black  contacts flex text-white  overflow-x-auto scroll whitespace-nowrap w-full  sm:justify-center snap-x snap-mandatory  p-2 "
+      className="bg-black h-[600px] flex flex-col lg:flex-row relative overflow-hidden"
     >
-      {/* left */}
-
-      <div className="right flex  flex-col snap-center w-[500px]  gap-3 flex-shrink-0  ">
-        <div className="text-3xl sm:text-4xl  text-center font-bold w-full">
+      {/* Contact Form Section */}
+      <div className="flex-1 bg-black p-8 flex flex-col items-center justify-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           Get in touch
-        </div>
+        </h2>
+
         <form
-          className="  w-full sm:w-auto h-auto flex flex-col  items-center justify-center"
+          className="w-full max-w-md flex flex-col gap-6"
           onSubmit={onSubmit}
         >
-          <div className="flex  flex-col gap-3">
-            <label htmlFor="" className="text-end self-start w-[60px]"></label>
+          <div className="flex flex-col gap-2">
             <input
               name="name"
-              placeholder="Name:"
+              placeholder="Name"
               type="text"
-              className="name w-[300px]   h-8 border-b-2  px-2 border-white bg-black focus:outline-none"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-3">
-            <label htmlFor="" className="text-end self-end w-[60px] "></label>
-            <input
-              name="email"
-              placeholder="Email:"
-              type="email"
-              className="email w-[300px]  h-8 border-b-2 px-2 border-white bg-black focus:outline-none"
+              className="w-full h-12 px-4 border-2 border-white bg-black text-white placeholder-white focus:outline-none focus:border-white rounded-lg"
               required
             />
           </div>
 
-          <div className="flex flex-col gap-3 mt-8">
-            <label
-              htmlFor=""
-              className="message text-end self-start w-[60px]"
-            ></label>
+          <div className="flex flex-col gap-2">
+            <input
+              name="email"
+              placeholder="Email"
+              type="email"
+              className="w-full h-12 px-4 border-2 border-white bg-black text-white placeholder-white focus:outline-none focus:border-white rounded-lg"
+              required
+            />
+          </div>
+
+          <div className="flex flex-col gap-2">
             <textarea
               name="message"
-              className="message border-2 border-white bg-black px-2 pt-1 focus:outline-none rounded resize-none "
-              cols={33}
-              rows={5}
+              placeholder="Message"
+              className="w-full h-32 px-4 py-3 border-2 border-white bg-black text-white placeholder-white focus:outline-none focus:border-white rounded-lg resize-none"
               required
-              placeholder="Message:"
-            ></textarea>
+            />
           </div>
 
           <button
-            className="subBut w-16 h-8 font-semibold active:scale-90 active:text-yellow-200 duration-300"
+            className="w-full h-12 font-semibold bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-all duration-300"
             type="submit"
           >
             Submit
@@ -90,16 +83,19 @@ export default function Contacts() {
         </form>
       </div>
 
-      {/* right */}
-      <div className="left flex flex-col snap-center w-[500px]  gap-3 flex-shrink-0   ">
-        <div className="text-3xl sm:text-4xl text-center font-bold w-full ">
+      {/* Map Section */}
+      <div className="flex-1 bg-black p-8 flex flex-col items-center justify-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           My Location
+        </h2>
+
+        <div className="w-full max-w-lg">
+          <iframe
+            className="w-full h-80 border-2 border-white rounded-lg"
+            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Thornhill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            allowFullScreen={true}
+          />
         </div>
-        <iframe
-          className="border-black flex-auto border rounded-md  self-center"
-          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Thornhill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          allowFullScreen={true}
-        ></iframe>
       </div>
     </div>
   );

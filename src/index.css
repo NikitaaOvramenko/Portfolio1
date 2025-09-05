@@ -2,42 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  margin: 0;
-  padding: 0;
-  
-  
-  
-}
-
-#Projects{
-  
-  background-color: white;
-  color:black;
-
-}
-
-#Contacts,.message{
-  background-color: white;
-  color: black;
-}
-
-.name,.email,.message{
-  background-color: white;
-  border-color: black;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-body{
-
-  overflow-x: hidden;
-  
- 
-}
-
 
 
 

@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import "./cssComp/f.css";
 
 import ReactGA from "react-ga4";
+import Experiences from "./components/Experiences";
 
 function App() {
   useEffect(() => {
@@ -19,9 +20,12 @@ function App() {
     <>
       <NavBar />
       <About />
-      <Projects></Projects>
+      <Experiences />
+
       <Skills />
+      <Projects></Projects>
       <Contacts></Contacts>
+
       <Footer></Footer>
     </>
   );

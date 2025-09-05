@@ -59,7 +59,7 @@ function creatingBallz(width: number, height: number) {
 }
 
 export default function Physics() {
-  const colorWalls = "black";
+  const colorWalls = "transparent"; // Make walls transparent
   const scene = useRef<HTMLDivElement>(null);
   const engine = useRef(Engine.create());
   const { width: windowWidth } = useWindowDimensions();
@@ -101,7 +101,7 @@ export default function Physics() {
         width: curWid,
         height: curHei,
         wireframes: false,
-        background: "#000000",
+        background: "transparent",
       },
     });
 
@@ -167,9 +167,9 @@ export default function Physics() {
       <div
         id="Skills"
         ref={scene}
-        className="main skills  h-[250px] sm:h-[300px] 2xl:h-[600px]  border-b-2 py-5  border-white bg-black w-full flex justify-center items-center relative "
+        className="main skills h-[600px] py-5 bg-black w-full flex justify-center items-center relative shadow-xl overflow-hidden"
       >
-        <div className=" absolute select-none text-white text-2xl md:text-6xl hover:text-yellow-200 duration-300 font-bold  ">
+        <div className=" absolute select-none text-2xl md:text-6xl font-bold  bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           Skills
         </div>
       </div>
