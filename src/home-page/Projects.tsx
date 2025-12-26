@@ -2,8 +2,8 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import "../cssComp/f.css";
 import "../cssComp/scroll.css";
 import Modal, { type MediaItem } from "../components/Modal";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+import { data } from "../data/projectsData";
 
 export default function Projects() {
   const [modal, setModal] = useState(false);
@@ -11,22 +11,6 @@ export default function Projects() {
   const [text, SetText] = useState<JSX.Element | null>(null);
 
   const [pic, SetPic] = useState<MediaItem[]>([]);
-
-  const [data, setData] = useState([]);
-  const SPREADSHEET_ID = "1Daj905cL8JVyYoS7aedW1K0YXrKjXyVtn-EF5cxW7zg";
-  const RANGE = "Sheet1!A2:Z100";
-  const API_KEY = "your_api_key";
-
-  useEffect(() => {
-    const url = `sheets.googleapis.com${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`;
-
-    axios
-      .get(url)
-      .then((response) => {
-        setData(response.data.values);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
 
   const toggle = (name: string, text: JSX.Element | null, pics: string[]) => {
     setModal(!modal);
