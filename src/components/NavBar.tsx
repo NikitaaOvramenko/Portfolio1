@@ -2,7 +2,7 @@ import { useState } from "react";
 import git from "../icons/github.png";
 import inst from "../icons/instagram.png";
 import gmail from "../icons/gmail.png";
-import resume from "../pdfs/Nikita's Resume1.pdf";
+import resume from "../pdfs/resume.pdf";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ export default function NavBar() {
   const handleNavClick = (item: string) => {
     // Close mobile menu when any nav item is clicked
     setIsMenuOpen(false);
-    
+
     if (item === "Resume") {
       // Resume - handled by href and download attribute
       return;
