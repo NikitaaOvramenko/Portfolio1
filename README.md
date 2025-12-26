@@ -240,10 +240,25 @@ npm run preview
 
 ## 📸 Screenshots
 
-| Home Page                                                                                           | Project Page                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Dark theme with animated waves](screenshots/HeroPic.png)                                          | ![Dynamic README Route](screenshots/LinkPic.png)![Dynamic Page](screenshots/DynamicRenderPic.png)![Synced From GitHub](screenshots/DynamicRenderGitPic.png) |
-| ![Projects-SpreadSheet](screenshots/SpreadSheetPic.png)![Project Page](screenshots/ProjectsPic.png) | ![Mermaid diagram](screenshots/MermaidSupportPic.png)                                                                                                       |
+### Home Page
+
+![Hero Section](screenshots/HeroPic.png)
+
+### Projects Section (Powered by Google Sheets)
+
+|                   Spreadsheet Data                   |                 Project Cards                 |
+| :--------------------------------------------------: | :-------------------------------------------: |
+| ![Google Sheets CMS](screenshots/SpreadSheetPic.png) | ![Projects Grid](screenshots/ProjectsPic.png) |
+
+### Dynamic Project Pages
+
+|         Route Navigation         |                README Rendered                |                  Synced from GitHub                   |
+| :------------------------------: | :-------------------------------------------: | :---------------------------------------------------: |
+| ![Link](screenshots/LinkPic.png) | ![Rendered](screenshots/DynamicRenderPic.png) | ![GitHub Source](screenshots/DynamicRenderGitPic.png) |
+
+### Mermaid Diagram Support
+
+![Mermaid Diagrams](screenshots/MermaidSupportPic.png)
 
 ---
 
