@@ -243,7 +243,7 @@ npm run preview
 | Home Page                                                                                           | Project Page                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Dark theme with animated waves](screenshots/HeroPic.png)                                          | ![Dynamic README Route](screenshots/LinkPic.png)![Dynamic Page](screenshots/DynamicRenderPic.png)![Synced From GitHub](screenshots/DynamicRenderGitPic.png) |
-| ![Projects-SpreadSheet](screenshots/SpreadSheetPic.png)![Project Page](screenshots/ProjectsPic.png) | ![Mermaid diagram](screenshots/MermaidSupportPic.png) support                                                                                               |
+| ![Projects-SpreadSheet](screenshots/SpreadSheetPic.png)![Project Page](screenshots/ProjectsPic.png) | ![Mermaid diagram](screenshots/MermaidSupportPic.png)                                                                                                       |
 
 ---
 
