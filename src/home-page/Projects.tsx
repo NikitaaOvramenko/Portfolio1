@@ -2,15 +2,33 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import "../cssComp/f.css";
 import "../cssComp/scroll.css";
 import Modal, { type MediaItem } from "../components/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { data } from "../data/projectsData";
+import axios from "axios";
 
 export default function Projects() {
+  const [dataSheet, setDataSheet] = useState([]);
+  const SPREADSHEET_ID = "1Daj905cL8JVyYoS7aedW1K0YXrKjXyVtn-EF5cxW7zg";
+  const RANGE = "Sheet1!A2:E10";
+  const API_KEY = import.meta.env.VITE_SPREADSHEET_API;
+
   const [modal, setModal] = useState(false);
   const [name, SetName] = useState("");
   const [text, SetText] = useState<JSX.Element | null>(null);
 
   const [pic, SetPic] = useState<MediaItem[]>([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        `sheets.googleapis.com${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`
+      )
+      .then((response) => {
+        setDataSheet(response.data.values);
+        console.log(dataSheet);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   const toggle = (name: string, text: JSX.Element | null, pics: string[]) => {
     setModal(!modal);
