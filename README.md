@@ -240,10 +240,10 @@ npm run preview
 
 ## 📸 Screenshots
 
-| Home Page                                                  | Project Page             |
-| ---------------------------------------------------------- | ------------------------ |
-| ![Dark theme with animated waves](screenshots/HeroPic.png) | Dynamic README rendering |
-| Physics-based skills section                               | Mermaid diagram support  |
+| Home Page                                                                                               | Project Page             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------ |
+| ![Dark theme with animated waves](screenshots/HeroPic.png)                                              | Dynamic README rendering |
+| ![Projects-SpreadSheet](screenshots/SpreadSheetPic.png)<br>![Project Page](screenshots/ProjectsPic.png) | Mermaid diagram support  |
 
 ---
 
