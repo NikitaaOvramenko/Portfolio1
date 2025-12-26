@@ -2,7 +2,7 @@
 
 # 🚀 Nikita Ovramenko — Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blueviolet?style=for-the-badge&logo=vercel)](https://nikitaaovramenko.github.io/Portfolio1/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blueviolet?style=for-the-badge&logo=vercel)](https://portfolio1-theta-rouge.vercel.app/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
@@ -240,10 +240,10 @@ npm run preview
 
 ## 📸 Screenshots
 
-| Home Page                      | Project Page             |
-| ------------------------------ | ------------------------ |
-| Dark theme with animated waves | Dynamic README rendering |
-| Physics-based skills section   | Mermaid diagram support  |
+| Home Page                                                  | Project Page             |
+| ---------------------------------------------------------- | ------------------------ |
+| ![Dark theme with animated waves](screenshots\HeroPic.png) | Dynamic README rendering |
+| Physics-based skills section                               | Mermaid diagram support  |
 
 ---
 
