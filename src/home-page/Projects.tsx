@@ -1,4 +1,3 @@
-import { data } from "../data/projectsData";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import "../cssComp/f.css";
 import "../cssComp/scroll.css";
