@@ -33,3 +33,5 @@ All interactive elements in the navbar SHALL have a minimum touch target size of
 - **WHEN** viewing navbar on mobile
 - **THEN** hamburger button and menu items have minimum 44px touch target height
 
+
+

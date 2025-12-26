@@ -21,3 +21,5 @@ The current ProjectPage correctly fetches README content from GitHub but lacks p
   - `tailwind.config.js` - Add `@tailwindcss/typography` plugin (if not present)
 - **Dependencies**: May need to install `@tailwindcss/typography`
 
+
+

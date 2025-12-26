@@ -109,7 +109,7 @@ export default function ProjectPage() {
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto p-6 pb-16 w-full">
+      <div className=" p-6 pb-16 w-[88%]">
         {loading && (
           <div className="flex items-center justify-center py-20">
             <div className="w-10 h-10 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
@@ -129,7 +129,7 @@ export default function ProjectPage() {
         )}
 
         {!loading && !error && readme && (
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 md:p-8">
+          <div className="bg-white/5 border border-white/10 rounded-xl  p-6 md:p-8">
             <article className="prose prose-invert prose-lg max-w-none font-body prose-headings:font-heading prose-headings:text-white prose-headings:font-bold prose-p:text-white/80 prose-p:leading-relaxed prose-a:text-purple-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-white prose-code:bg-white/10 prose-code:text-purple-300 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-lg prose-li:text-white/80 prose-li:marker:text-purple-400 prose-hr:border-white/10 prose-blockquote:border-purple-400 prose-blockquote:text-white/70 prose-img:rounded-lg">
               <MarkdownWithMermaid content={readme} />
             </article>

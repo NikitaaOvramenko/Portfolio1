@@ -14,3 +14,5 @@ The navbar currently has limited mobile responsiveness. On small screens, the na
 - Affected specs: navigation (new capability)
 - Affected code: `src/components/NavBar.tsx`
 
+
+
