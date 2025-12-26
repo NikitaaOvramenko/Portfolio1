@@ -2,6 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========================================
+   Font Face Declarations - LemonMilk
+   ======================================== */
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-LIGHT.OTF') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-LIGHTITALIC.OTF') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-REGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-REGULARITALIC.OTF') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-MEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-MEDIUMITALIC.OTF') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-BOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./assets/fonts/LemonMilk/LEMONMILK-BOLDITALIC.OTF') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ========================================
+   Design Tokens - CSS Custom Properties
+   ======================================== */
+:root {
+  /* Colors */
+  --color-bg: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-accent: #a855f7;
+  --color-accent-light: #c084fc;
+  
+  /* Neon Glow Effects - subtle */
+  --glow-white: 0 0 6px rgba(255, 255, 255, 0.25), 0 0 12px rgba(255, 255, 255, 0.1);
+  --glow-accent: 0 0 6px rgba(168, 85, 247, 0.3), 0 0 12px rgba(168, 85, 247, 0.15);
+  
+  /* Fonts */
+  --font-heading: 'LemonMilk', sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+  /* Spacing */
+  --section-padding: 2rem;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.neon-glow {
+  text-shadow: var(--glow-white);
+}
+
+.neon-glow-accent {
+  text-shadow: var(--glow-accent);
+}
+
+/* Entrance animation for headings */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}

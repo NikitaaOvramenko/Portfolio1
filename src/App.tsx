@@ -1,14 +1,13 @@
-import About from "./components/About";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contacts from "./components/Contacts";
+
 import Footer from "./components/Footer";
+import ProjectPage from "./pages/ProjectPage";
 import { useEffect } from "react";
 import "./cssComp/f.css";
 
 import ReactGA from "react-ga4";
-import Experiences from "./components/Experiences";
+import HomePage from "./pages/HomePage";
 
 function App() {
   useEffect(() => {
@@ -19,14 +18,11 @@ function App() {
   return (
     <>
       <NavBar />
-      <About />
-      <Experiences />
-
-      <Skills />
-      <Projects></Projects>
-      <Contacts></Contacts>
-
-      <Footer></Footer>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/project/:slug" element={<ProjectPage />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

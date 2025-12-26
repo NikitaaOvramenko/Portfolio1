@@ -4,7 +4,7 @@ import { ballzData } from "../data/ballz";
 import useWindowDimensions from "../helpers/WindowHool";
 
 function creatingBallz(width: number, height: number) {
-  let ballz: Matter.Body[] = [];
+  const ballz: Matter.Body[] = [];
   ballzData.forEach((ball) => {
     if (ball.shape == "c") {
       const circle = Bodies.circle(width / 2, height / 2, width / 20, {
@@ -167,9 +167,9 @@ export default function Physics() {
       <div
         id="Skills"
         ref={scene}
-        className="main skills h-[700px] py-5 bg-black w-full flex justify-center items-center relative shadow-xl overflow-hidden"
+        className="main skills h-[700px] py-5 bg-black bg-opacity-50 w-[85%] pointer-events-auto flex justify-center items-center relative  overflow-hidden"
       >
-        <div className=" absolute select-none text-3xl sm:text-4xl md:text-6xl font-bold  bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+        <div className="absolute select-none text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-white neon-glow animate-fade-in-up">
           Skills
         </div>
       </div>
