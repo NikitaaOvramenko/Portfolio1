@@ -242,7 +242,7 @@ npm run preview
 
 | Home Page                                                  | Project Page             |
 | ---------------------------------------------------------- | ------------------------ |
-| ![Dark theme with animated waves](screenshots\HeroPic.png) | Dynamic README rendering |
+| ![Dark theme with animated waves](screenshots/HeroPic.png) | Dynamic README rendering |
 | Physics-based skills section                               | Mermaid diagram support  |
 
 ---
