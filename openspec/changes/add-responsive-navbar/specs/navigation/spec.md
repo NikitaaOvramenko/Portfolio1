@@ -36,3 +36,4 @@ All interactive elements in the navbar SHALL have a minimum touch target size of
 
 
 
+

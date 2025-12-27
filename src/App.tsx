@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import ThemeContextProvider from "./context/ThemeContextProvider.tsx";
 
 import Footer from "./components/Footer";
 import ProjectPage from "./pages/ProjectPage";
@@ -17,12 +18,17 @@ function App() {
 
   return (
     <>
+        <ThemeContextProvider>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/:slug" element={<ProjectPage />} />
-      </Routes>
+
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/project/:slug" element={<ProjectPage />} />
+            </Routes>
+
+
       <Footer />
+        </ThemeContextProvider>
     </>
   );
 }

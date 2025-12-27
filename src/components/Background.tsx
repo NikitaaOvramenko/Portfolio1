@@ -1,61 +1,66 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
+import { useTheme } from "../context/ThemeContext.tsx";
+
 window.THREE = THREE;
 
-export default function Background({
-  children,
-}: {
+// Vanta wave configuration
+const getWaveConfig = (element: HTMLElement, theme: string) => ({
+  el: element,
+  THREE,
+  mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  scale: 1.0,
+  scaleMobile: 1.0,
+  color: theme === "light" ? 0x575757 : 0x000000,
+  shininess: 45,
+  waveHeight: 20,
+  waveSpeed: 0.2,
+  zoom: 0.70,
+});
+
+interface BackgroundProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function Background({ children }: BackgroundProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [vantaEffect, setVantaEffect] = useState<any>(null);
   const vantaRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
-  // Resize handler for dynamic content
+  // Resize handler
   const handleResize = useCallback(() => {
-    if (vantaEffect) {
-      vantaEffect.resize();
-    }
+    vantaEffect?.resize();
   }, [vantaEffect]);
 
-  // Initialize Vanta effect
+  // Create/recreate Vanta effect when theme changes
   useEffect(() => {
-    if (!vantaEffect && vantaRef.current) {
-      setVantaEffect(
-        WAVES({
-          el: vantaRef.current,
-          THREE: THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x000000,
-          shininess: 45,
-          waveHeight: 20,
-          waveSpeed: 0.2,
-          zoom: 0.75,
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
+    if (!vantaRef.current) return;
 
-  // Watch for container size changes (when content loads dynamically)
+    // Cleanup previous effect
+    vantaEffect?.destroy();
+
+    // Create new effect with current theme
+    const effect = WAVES(getWaveConfig(vantaRef.current, theme));
+    setVantaEffect(effect);
+
+    return () => {
+      effect.destroy();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [theme]);
+
+  // Handle resize events
   useEffect(() => {
     if (!vantaRef.current || !vantaEffect) return;
 
-    const resizeObserver = new ResizeObserver(() => {
-      handleResize();
-    });
-
+    const resizeObserver = new ResizeObserver(handleResize);
     resizeObserver.observe(vantaRef.current);
-
-    // Also handle window resize
     window.addEventListener("resize", handleResize);
 
     return () => {

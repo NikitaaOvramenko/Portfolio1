@@ -87,17 +87,52 @@ The Skills section features floating, draggable skill badges in a zero-gravity s
 - Users can grab and throw them
 - Responsive sizing based on viewport
 
-#### Dark Neon Theme
+#### Dark Neon Theme (with Light Mode Option)
 
-- **Colors:** Black background with purple/cyan gradient accents
+- **Colors:** Black background with purple/cyan gradient accents (dark) or clean white with gray accents (light)
 - **Typography:** Custom Lemon Milk font family
 - **Effects:** Glassmorphism cards, neon text shadows, smooth transitions
+- **Theme Toggle:** ☀️/🌙 button in navbar for instant theme switching
 
 #### Responsive Design
 
 - Mobile-first approach with Tailwind breakpoints
 - Animated hamburger menu for mobile navigation
 - Smooth scroll navigation between sections
+
+### 4. Light/Dark Theme Toggle
+
+A complete theme system powered by React Context, allowing users to switch between dark and light modes with a single click.
+
+**How it works:**
+
+```
+User clicks ☀️/🌙 → ThemeContext updates → All components re-render with new colors
+```
+
+**Implementation:**
+
+- **React Context** — `ThemeContext` provides global theme state
+- **Custom Hook** — `useTheme()` hook for consuming theme in components
+- **Conditional Styling** — Components use `isDark` flag to apply appropriate Tailwind classes
+
+```typescript
+// ThemeContext provides theme state to all components
+const { theme } = useTheme();
+const isDark = theme === "dark";
+
+// Components conditionally apply classes
+<div className={isDark ? "bg-black text-white" : "bg-white text-gray-900"}>
+```
+
+**Color Mapping:**
+
+| Dark Theme        | Light Theme           |
+| ----------------- | --------------------- |
+| `bg-black`        | `bg-white`            |
+| `text-white`      | `text-gray-900`       |
+| `border-white/10` | `border-gray-200`     |
+| `prose-invert`    | `prose` (default)     |
 
 ---
 
@@ -259,6 +294,12 @@ npm run preview
 ### Mermaid Diagram Support
 
 ![Mermaid Diagrams](screenshots/MermaidSupportPic.png)
+
+### Theme Toggle (Dark / Light Mode)
+
+|              Dark Theme               |               Light Theme               |
+| :-----------------------------------: | :-------------------------------------: |
+| ![Dark Mode](screenshots/darkTheme.png) | ![Light Mode](screenshots/lightTheme.png) |
 
 ---
 

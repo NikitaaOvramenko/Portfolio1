@@ -2,6 +2,7 @@ import Matter, { Engine, Render, World, Bodies, Runner, Body } from "matter-js";
 import { useRef, useEffect, useState } from "react";
 import { ballzData } from "../data/ballz";
 import useWindowDimensions from "../helpers/WindowHool";
+import { useTheme } from "../context/ThemeContext.tsx";
 
 function creatingBallz(width: number, height: number) {
   const ballz: Matter.Body[] = [];
@@ -59,16 +60,14 @@ function creatingBallz(width: number, height: number) {
 }
 
 export default function Physics() {
-  const colorWalls = "transparent"; // Make walls transparent
+  const colorWalls = "transparent";
   const scene = useRef<HTMLDivElement>(null);
   const engine = useRef(Engine.create());
   const { width: windowWidth } = useWindowDimensions();
   const [curWid, SetWid] = useState(1000);
   const [curHei, SetHei] = useState(280);
-
-  const text = document.createElement("div");
-
-  text.style.color = "yellow";
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
 
   useEffect(() => {
     if (windowWidth < 1000) {
@@ -167,14 +166,18 @@ export default function Physics() {
       <div
         id="Skills"
         ref={scene}
-        className="main skills h-[700px] py-5 bg-black bg-opacity-50 w-[85%] pointer-events-auto flex justify-center items-center relative  overflow-hidden"
+        className={`main skills h-[700px] py-5 bg-opacity-50 w-[85%] pointer-events-auto flex justify-center items-center relative overflow-hidden ${
+          isDark ? "bg-black" : "bg-white"
+        }`}
       >
-        <div className="absolute select-none text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-white neon-glow animate-fade-in-up">
+        <div
+          className={`absolute select-none text-3xl sm:text-4xl md:text-6xl font-bold font-heading animate-fade-in-up ${
+            isDark ? "text-white neon-glow" : "text-gray-900"
+          }`}
+        >
           Skills
         </div>
       </div>
-
-      {/* <div>{useWindowDimensions().width}</div> */}
     </>
   );
 }
