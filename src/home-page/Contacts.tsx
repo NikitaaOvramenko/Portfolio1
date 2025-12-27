@@ -1,16 +1,21 @@
 import "../cssComp/cont.css";
 import Swal from "sweetalert2";
 import { useTheme } from "../context/ThemeContext.tsx";
+import {ChangeEvent, useState} from "react";
 
 export default function Contacts() {
   const { theme } = useTheme();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const isDark = theme === "dark";
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    formData.append("access_key", "38657813-54ac-464b-badf-73b942a57494");
+    formData.append("access_key", import.meta.env.VITE_FORM_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -30,6 +35,13 @@ export default function Contacts() {
         icon: "success",
         draggable: true,
       });
+
+      console.log(name,email,message);
+      setName("");
+      setEmail("");
+      setMessage("");
+
+
       console.log("Success", res);
     }
   };
@@ -57,7 +69,10 @@ export default function Contacts() {
         >
           <div className="flex flex-col gap-2">
             <input
+
+                onChange={(event:ChangeEvent<HTMLInputElement>) => setName(event.target.value)}
               name="name"
+                value={name}
               placeholder="Name"
               type="text"
               className={`w-full h-12 px-4 border rounded-lg transition-all duration-300 focus:outline-none focus:border-purple-500 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] ${
@@ -72,7 +87,9 @@ export default function Contacts() {
           <div className="flex flex-col gap-2">
             <input
               name="email"
+              onChange={(event:ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
               placeholder="Email"
+              value={email}
               type="email"
               className={`w-full h-12 px-4 border rounded-lg transition-all duration-300 focus:outline-none focus:border-purple-500 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] ${
                 isDark
@@ -85,8 +102,10 @@ export default function Contacts() {
 
           <div className="flex flex-col gap-2">
             <textarea
+                onChange={(event:ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value)}
               name="message"
               placeholder="Message"
+                value={message}
               className={`w-full h-32 px-4 py-3 border rounded-lg resize-none transition-all duration-300 focus:outline-none focus:border-purple-500 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] ${
                 isDark
                   ? "border-white/30 bg-black text-white placeholder-white/50"
@@ -110,25 +129,7 @@ export default function Contacts() {
       </div>
 
       {/* Map Section */}
-      <div className="min-w-full lg:min-w-0 lg:flex-1 bg-opacity-0 p-8 flex flex-col items-center justify-center">
-        <h2
-          className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-8 font-heading animate-fade-in-up ${
-            isDark ? "text-white neon-glow" : "text-gray-900"
-          }`}
-        >
-          My Location
-        </h2>
 
-        <div className="w-full max-w-lg">
-          <iframe
-            className={`w-full h-80 border rounded-lg ${
-              isDark ? "border-white/30" : "border-gray-300"
-            }`}
-            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Thornhill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            allowFullScreen={true}
-          />
-        </div>
-      </div>
     </div>
   );
 }

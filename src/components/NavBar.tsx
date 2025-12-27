@@ -2,7 +2,7 @@ import { useState } from "react";
 import git from "../icons/github.png";
 import linkedin from "../icons/linkedin.png";
 import gmail from "../icons/gmail.png";
-import resume from "../pdfs/resume.pdf";
+import resume from "../pdfs/Nikita's-Resume.pdf";
 import { useTheme } from "../context/ThemeContext.tsx";
 
 export default function NavBar() {
@@ -14,7 +14,7 @@ export default function NavBar() {
   const links = [
     "https://github.com/NikitaaOvramenko",
     "https://www.linkedin.com/in/nikitaovramenko/",
-    "mailto:nikita.ovramenko@torontomu.ca",
+    "mailto:nikita@ovramenko.dev",
   ];
 
   const scrollToSection = (sectionId: string) => {
