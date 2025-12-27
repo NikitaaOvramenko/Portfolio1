@@ -166,7 +166,7 @@ export default function Physics() {
       <div
         id="Skills"
         ref={scene}
-        className={`main skills h-[700px] py-5 bg-opacity-50 w-[85%] pointer-events-auto flex justify-center items-center relative overflow-hidden ${
+        className={`main skills h-[600px] md:h-dvh py-5 bg-opacity-50 w-[85%] pointer-events-auto flex justify-center items-center relative overflow-hidden ${
           isDark ? "bg-black" : "bg-white"
         }`}
       >

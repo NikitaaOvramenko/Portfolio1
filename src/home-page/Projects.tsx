@@ -74,7 +74,7 @@ export default function Projects() {
     <>
       <div
         id="Projects"
-        className={`h-[700px] flex flex-col gap-10 justify-center relative bg-opacity-50 w-[85%] overflow-hidden ${
+        className={`h-[600px] md:h-dvh flex flex-col gap-10 justify-center relative bg-opacity-50 w-[85%] overflow-hidden ${
           isDark ? "bg-black text-white" : "bg-white text-gray-900"
         }`}
       >

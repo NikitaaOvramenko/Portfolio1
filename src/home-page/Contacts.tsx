@@ -49,7 +49,7 @@ export default function Contacts() {
   return (
     <div
       id="Contacts"
-      className={`h-[700px] w-[85%] bg-opacity-50 flex flex-row relative overflow-x-scroll overflow-y-hidden ${
+      className={`h-[600px] md:h-dvh w-[85%] bg-opacity-50 flex flex-row relative overflow-x-scroll overflow-y-hidden ${
         isDark ? "bg-black" : "bg-white"
       }`}
     >

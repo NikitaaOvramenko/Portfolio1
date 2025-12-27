@@ -7,15 +7,15 @@ export default function About() {
 
   return (
     <div
-      className={`flex z-10 flex-col sm:flex-row h-[700px] w-[85%] px-8 pt-8 pb-8 bg-opacity-50 items-center relative overflow-hidden ${
+      className={`flex z-10 flex-col sm:flex-row h-[600px] md:h-dvh w-[85%] px-8 pt-8 pb-8 bg-opacity-50 items-center relative  ${
         isDark ? "bg-black" : "bg-white"
       }`}
     >
       {/* left */}
-      <div className="boxx left w-full sm:w-1/2 flex justify-center items-center">
+      <div className="boxx left h-full w-full sm:w-1/2 flex justify-center items-center">
         <div className="relative">
           <div
-            className={`w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 shadow-2xl shadow-purple-500/20 p-1 ${
+            className={`w-[clamp(11rem,25vw,30rem)] h-[clamp(11rem,25vw,30rem)] rounded-full overflow-hidden border-2 shadow-2xl shadow-purple-500/20 p-1 ${
               isDark ? "border-white/20" : "border-gray-300"
             }`}
           >
@@ -35,13 +35,13 @@ export default function About() {
 
       {/* right */}
       <div
-        className={`boxx right text-pretty w-full sm:w-1/2 text-lg sm:text-[1.4vw] md:text-[1.5vw] font-body ${
+        className={`boxx right text-pretty w-full sm:w-1/2  font-body ${
           isDark ? "text-white" : "text-gray-900"
         }`}
       >
         <p className="pt-5">
           <span
-            className={`font-heading leading-[4rem] text-3xl sm:text-[4vw] md:text-[4vw] 2xl:text-7xl font-bold animate-fade-in-up ${
+            className={`font-heading  leading-[2.5rem] md:leading-[4rem] text-3xl sm:text-[4vw] md:text-[4vw] 2xl:text-7xl font-bold animate-fade-in-up ${
               isDark ? "text-white neon-glow" : "text-gray-900"
             }`}
           >
@@ -49,7 +49,7 @@ export default function About() {
           </span>
         </p>
         <p
-          className={`mt-4 leading-relaxed transition-colors duration-300 ${
+          className={`mt-4 leading-relaxed  text-[clamp(0.85rem,1.5vw,6rem)] transition-colors duration-300 ${
             isDark
               ? "text-white/90 hover:text-white"
               : "text-gray-700 hover:text-gray-900"
