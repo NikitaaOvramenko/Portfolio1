@@ -9,6 +9,7 @@ import "./cssComp/f.css";
 
 import ReactGA from "react-ga4";
 import HomePage from "./pages/HomePage";
+import Background from "./components/Background.tsx";
 
 function App() {
   useEffect(() => {
@@ -18,17 +19,16 @@ function App() {
 
   return (
     <>
-        <ThemeContextProvider>
-      <NavBar />
-
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/project/:slug" element={<ProjectPage />} />
-            </Routes>
-
-
-      <Footer />
-        </ThemeContextProvider>
+      <ThemeContextProvider>
+        <NavBar />
+        <Background>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/project/:slug" element={<ProjectPage />} />
+          </Routes>
+        </Background>
+        <Footer />
+      </ThemeContextProvider>
     </>
   );
 }

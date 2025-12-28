@@ -5,7 +5,6 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { MermaidDiagram } from "@lightenna/react-mermaid-diagram";
-import Background from "../components/Background";
 import { useTheme } from "../context/ThemeContext.tsx";
 
 export default function ProjectPage() {
@@ -96,7 +95,7 @@ export default function ProjectPage() {
     "prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-purple-600 prose-strong:text-gray-900 prose-code:bg-gray-100 prose-code:text-purple-600 prose-pre:bg-gray-50 prose-pre:border-gray-200 prose-li:text-gray-700 prose-li:marker:text-purple-600 prose-hr:border-gray-200 prose-blockquote:border-purple-600 prose-blockquote:text-gray-600";
 
   return (
-    <Background>
+    <>
       {/* Header */}
       <div
         className={`border-b p-6 w-[85%] mt-16 ${
@@ -196,6 +195,6 @@ export default function ProjectPage() {
           </div>
         )}
       </div>
-    </Background>
+    </>
   );
 }
