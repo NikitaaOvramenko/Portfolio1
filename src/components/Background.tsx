@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import { useTheme } from "../context/ThemeContext.tsx";
@@ -28,36 +28,60 @@ interface BackgroundProps {
 }
 
 export default function Background({ children }: BackgroundProps) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
   const vantaRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const effectRef = useRef<any>(null);
   const { theme } = useTheme();
 
   // Resize handler
   const handleResize = useCallback(() => {
-    vantaEffect?.resize();
-  }, [vantaEffect]);
+    try {
+      effectRef.current?.resize();
+    } catch {
+      // Ignore resize errors
+    }
+  }, []);
 
   // Create/recreate Vanta effect when theme changes
   useEffect(() => {
     if (!vantaRef.current) return;
 
-    // Cleanup previous effect
-    vantaEffect?.destroy();
+    // Cleanup function to safely destroy effect
+    const cleanup = () => {
+      try {
+        if (effectRef.current) {
+          effectRef.current.destroy();
+          effectRef.current = null;
+        }
+      } catch {
+        // Ignore destroy errors on mobile
+        effectRef.current = null;
+      }
+    };
 
-    // Create new effect with current theme
-    const effect = WAVES(getWaveConfig(vantaRef.current, theme));
-    setVantaEffect(effect);
+    // Cleanup previous effect
+    cleanup();
+
+    // Small delay to let WebGL context properly release (helps on mobile)
+    const timeoutId = setTimeout(() => {
+      if (!vantaRef.current) return;
+
+      try {
+        effectRef.current = WAVES(getWaveConfig(vantaRef.current, theme));
+      } catch (error) {
+        console.warn("Failed to create Vanta effect:", error);
+      }
+    }, 50);
 
     return () => {
-      effect.destroy();
+      clearTimeout(timeoutId);
+      cleanup();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
 
   // Handle resize events
   useEffect(() => {
-    if (!vantaRef.current || !vantaEffect) return;
+    if (!vantaRef.current) return;
 
     const resizeObserver = new ResizeObserver(handleResize);
     resizeObserver.observe(vantaRef.current);
@@ -67,7 +91,7 @@ export default function Background({ children }: BackgroundProps) {
       resizeObserver.disconnect();
       window.removeEventListener("resize", handleResize);
     };
-  }, [vantaEffect, handleResize]);
+  }, [handleResize]);
 
   return (
     <div

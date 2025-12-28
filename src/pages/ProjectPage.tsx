@@ -96,7 +96,7 @@ export default function ProjectPage() {
 
   return (
     <>
-      {/* <div
+      <div
         className={`border-b p-6 w-[85%] mt-16 ${
           isDark ? "border-white/10" : "border-gray-200"
         }`}
@@ -192,7 +192,7 @@ export default function ProjectPage() {
             </p>
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 }
