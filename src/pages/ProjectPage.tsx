@@ -96,8 +96,7 @@ export default function ProjectPage() {
 
   return (
     <>
-      {/* Header */}
-      <div
+      {/* <div
         className={`border-b p-6 w-[85%] mt-16 ${
           isDark ? "border-white/10" : "border-gray-200"
         }`}
@@ -129,7 +128,6 @@ export default function ProjectPage() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-6 pb-16 w-full sm:w-[88%]">
         {loading && (
           <div className="flex items-center justify-center py-20">
@@ -194,7 +192,7 @@ export default function ProjectPage() {
             </p>
           </div>
         )}
-      </div>
+      </div> */}
     </>
   );
 }
