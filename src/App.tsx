@@ -18,18 +18,17 @@ function App() {
   }, []);
 
   return (
-    <>
-      <ThemeContextProvider>
+    <ThemeContextProvider>
+      <Background />
+      <div className="flex flex-col items-center min-h-screen">
         <NavBar />
-        <Background>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/project/:slug" element={<ProjectPage />} />
-          </Routes>
-        </Background>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:slug" element={<ProjectPage />} />
+        </Routes>
         <Footer />
-      </ThemeContextProvider>
-    </>
+      </div>
+    </ThemeContextProvider>
   );
 }
 
