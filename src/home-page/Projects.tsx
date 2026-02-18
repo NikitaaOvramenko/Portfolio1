@@ -107,7 +107,9 @@ export default function Projects() {
               .map((item, index) => (
                 <button
                   key={item.repo_name}
-                  onClick={() => navigate(`/project/${item.repo_name}`)}
+                  onClick={() =>
+                    navigate(`/project/${item.repo_name}/${item.branch}`)
+                  }
                   id={String(item.repo_name)}
                   className="group relative w-[clamp(350px,7vw,350px)] h-[200px] sm:h-[280px] 2xl:h-[320px] shrink-0 cursor-pointer transition-all duration-500 ease-out hover:scale-105"
                   style={{ animationDelay: `${index * 100}ms` }}

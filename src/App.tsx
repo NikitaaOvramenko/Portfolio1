@@ -24,7 +24,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/project/:slug" element={<ProjectPage />} />
+          <Route path="/project/:slug/:branch" element={<ProjectPage />} />
         </Routes>
         <Footer />
       </div>

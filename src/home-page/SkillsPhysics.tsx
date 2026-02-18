@@ -11,6 +11,7 @@ function creatingBallz(width: number, height: number) {
       const circle = Bodies.circle(width / 2, height / 2, width / 20, {
         friction: 0,
         frictionAir: 0,
+
         frictionStatic: 0,
         render: {
           sprite: {
@@ -23,7 +24,7 @@ function creatingBallz(width: number, height: number) {
       Body.applyForce(
         circle,
         { x: circle.position.x, y: circle.position.y },
-        { x: Math.random() * 0.02 - 0.01, y: Math.random() * 0.02 - 0.01 }
+        { x: Math.random() * 0.02 - 0.01, y: Math.random() * 0.02 - 0.01 },
       );
       ballz.push(circle);
     } else if (ball.shape == "s") {
@@ -43,13 +44,13 @@ function creatingBallz(width: number, height: number) {
               yScale: width / 6666.66,
             },
           },
-        }
+        },
       );
 
       Body.applyForce(
         square,
         { x: square.position.x, y: square.position.y },
-        { x: Math.random() * 0.02 - 0.01, y: Math.random() * 0.02 - 0.01 }
+        { x: Math.random() * 0.02 - 0.01, y: Math.random() * 0.02 - 0.01 },
       );
 
       ballz.push(square);

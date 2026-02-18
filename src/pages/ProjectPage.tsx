@@ -8,7 +8,8 @@ import { MermaidDiagram } from "@lightenna/react-mermaid-diagram";
 import { useTheme } from "../context/ThemeContext.tsx";
 
 export default function ProjectPage() {
-  const { slug } = useParams();
+  const { slug, branch } = useParams();
+
   const [readme, setReadme] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -24,13 +25,13 @@ export default function ProjectPage() {
         setError("");
 
         const res = await axios.get(
-          `https://api.github.com/repos/NikitaaOvramenko/${slug}/readme`,
+          `https://api.github.com/repos/NikitaaOvramenko/${slug}/readme/?ref=${branch}`,
           {
             headers: {
               Accept: "application/vnd.github.v3+json",
               Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
             },
-          }
+          },
         );
 
         const binary = window.atob(res.data.content);
