@@ -47,7 +47,7 @@ export default function ProjectPage() {
     }
 
     fetchReadme();
-  }, [slug]);
+  }, [slug, branch]);
 
   function CodeBlock({
     className,
@@ -67,7 +67,7 @@ export default function ProjectPage() {
   function ImageRenderer({ src, alt }: { src?: string; alt?: string }) {
     const resolvedSrc =
       src && !src.startsWith("http")
-        ? `https://raw.githubusercontent.com/NikitaaOvramenko/${slug}/main/${src}`
+        ? `https://raw.githubusercontent.com/NikitaaOvramenko/${slug}/${branch}/${src}`
         : src;
 
     return <img src={resolvedSrc} alt={alt || ""} className="rounded-lg" />;
