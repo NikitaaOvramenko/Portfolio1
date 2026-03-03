@@ -1,4 +1,4 @@
-import Face from "../iconsProj/me.jpg";
+import Face from "../iconsProj/me2.png";
 import { useTheme } from "../context/ThemeContext.tsx";
 
 export default function About() {
@@ -20,7 +20,7 @@ export default function About() {
             }`}
           >
             <img
-              className="w-full h-full object-cover rounded-full"
+              className="w-full h-full  object-cover rounded-full"
               src={Face}
               alt="Nikita Ovramenko"
             />
@@ -56,12 +56,12 @@ export default function About() {
           }`}
         >
           I'm a software developer experienced in full-stack web development,
-          cloud deployments, and embedded systems. Skilled in Java, Python,
-          C/C++, and TypeScript, I build responsive apps with React and scalable
-          backends using Node.js/Express and ASP.NET with Semantic Kernel. I
-          also work with Dockerized services, Supabase/PostgreSQL, and Raspberry
-          Pi automation, focusing on delivering efficient, production-ready
-          solutions.
+          cloud-based systems, and embedded projects. I use Java, Python, C/C++,
+          and TypeScript to build responsive apps, scalable backend services,
+          and automation-focused solutions. My experience includes React,
+          Node.js, Express, ASP.NET, Spring Boot, PostgreSQL, Docker, Supabase,
+          and Raspberry Pi projects, with a strong focus on building reliable
+          software that works in real-world use.
         </p>
       </div>
     </div>
