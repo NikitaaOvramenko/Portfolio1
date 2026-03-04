@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install @react-pdf/renderer)",
+      "Bash(npm uninstall @react-pdf/renderer)"
+    ]
+  }
+}

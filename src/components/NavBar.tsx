@@ -10,7 +10,7 @@ export default function NavBar() {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
-  const rightItems = ["Resume", "Projects", "Contacts"];
+  const rightItems = ["Resume", "Projects", "DataViz", "Contacts"];
   const links = [
     "https://github.com/NikitaaOvramenko",
     "https://www.linkedin.com/in/nikitaovramenko/",
