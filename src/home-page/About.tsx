@@ -20,7 +20,7 @@ export default function About() {
             }`}
           >
             <img
-              className="w-full h-full  object-cover rounded-full"
+              className="w-full h-full object-cover rounded-full"
               src={Face}
               alt="Nikita Ovramenko"
             />

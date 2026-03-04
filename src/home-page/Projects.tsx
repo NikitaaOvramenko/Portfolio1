@@ -6,6 +6,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext.tsx";
 
+interface Props {
+  type: string;
+}
+
 // TypeScript interface for project data from Google Sheets
 interface SheetProject {
   [key: string]: string;
@@ -29,7 +33,7 @@ function sheetsToJson(sheetsData: string[][] | undefined): SheetProject[] {
   });
 }
 
-export default function Projects() {
+export default function Projects({ type }: Props) {
   const navigate = useNavigate();
   const { theme } = useTheme();
   const isDark = theme === "dark";
@@ -83,7 +87,7 @@ export default function Projects() {
             isDark ? "text-white neon-glow" : "text-gray-900"
           }`}
         >
-          Projects
+          {type} Projects
         </div>
 
         <div className="projects flex items-center w-full h-[350px]">
@@ -104,6 +108,7 @@ export default function Projects() {
             {dataSheet
               .slice()
               .reverse()
+              .filter((proj) => proj.type === type)
               .map((item, index) => (
                 <button
                   key={item.repo_name}
