@@ -10,6 +10,7 @@ export default function HomePage() {
       <GapCard height={55} />
       <About />
       <Skills />
+      <Projects type="AI"/>
       <Projects type="Fullstack" />
       <Projects type="Frontend" />
       <Projects type="Backend" />
