@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ThemeContextProvider from "./context/ThemeContextProvider.tsx";
 
@@ -12,6 +12,9 @@ import HomePage from "./pages/HomePage";
 import Background from "./components/Background.tsx";
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   useEffect(() => {
     ReactGA.initialize("G-BY5E93F9B3");
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -21,7 +24,7 @@ function App() {
     <ThemeContextProvider>
       <Background />
       <div className="flex flex-col items-center min-h-screen">
-        <NavBar />
+        {isHomePage && <NavBar />}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:slug/:branch" element={<ProjectPage />} />

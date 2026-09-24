@@ -20,29 +20,43 @@ export default function Contacts() {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
+      if (res.success) {
+        Swal.fire({
+          title: "Sent",
+          icon: "success",
+          draggable: true,
+        });
+
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        Swal.fire({
+          title: "Something went wrong",
+          text: "Your message could not be sent. Please try again or reach out directly.",
+          icon: "error",
+          draggable: true,
+        });
+        console.error("Web3Forms error", res);
+      }
+    } catch (error) {
       Swal.fire({
-        title: "Sent",
-        icon: "success",
+        title: "Something went wrong",
+        text: "Your message could not be sent. Please try again or reach out directly.",
+        icon: "error",
         draggable: true,
       });
-
-      console.log(name,email,message);
-      setName("");
-      setEmail("");
-      setMessage("");
-
-
-      console.log("Success", res);
+      console.error("Contact form submission failed", error);
     }
   };
 

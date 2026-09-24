@@ -214,6 +214,7 @@ src/
    ```env
    VITE_GITHUB_TOKEN=your_github_personal_access_token
    VITE_SPREADSHEET_API=your_google_sheets_api_key
+   VITE_FORM_KEY=your_web3forms_access_key
    ```
 
 4. **Start the development server**
@@ -270,6 +271,7 @@ npm run preview
 | ---------------------- | --------------------------------------------- |
 | `VITE_GITHUB_TOKEN`    | GitHub Personal Access Token for API requests |
 | `VITE_SPREADSHEET_API` | Google Sheets API key for project data        |
+| `VITE_FORM_KEY`        | Web3Forms access key for the contact form (get one free at [web3forms.com](https://web3forms.com)) |
 
 ---
 
