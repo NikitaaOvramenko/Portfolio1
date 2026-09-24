@@ -73,6 +73,49 @@ export default function ProjectPage() {
     return <img src={resolvedSrc} alt={alt || ""} className="rounded-lg" />;
   }
 
+  function VideoRenderer({ src }: { src?: string }) {
+    const resolvedSrc =
+      src && !src.startsWith("http")
+        ? `https://raw.githubusercontent.com/NikitaaOvramenko/${slug}/${branch}/${src}`
+        : src;
+
+    return (
+      <video
+        src={resolvedSrc}
+        controls
+        playsInline
+        preload="metadata"
+        className="w-full rounded-lg"
+      />
+    );
+  }
+
+  function LinkRenderer({
+    href,
+    title,
+    children,
+  }: {
+    href?: string;
+    title?: string;
+    children?: React.ReactNode;
+  }) {
+    const videoExtension = /\.(mp4|webm|ogg|mov)(?:[?#].*)?$/i;
+    const isVideo =
+      href &&
+      (videoExtension.test(href) ||
+        (/^https:\/\/github\.com\/user-attachments\/assets\//i.test(href) &&
+          typeof children === "string" &&
+          videoExtension.test(children.trim())));
+
+    if (isVideo) return <VideoRenderer src={href} />;
+
+    return (
+      <a href={href} title={title}>
+        {children}
+      </a>
+    );
+  }
+
   function MarkdownWithMermaid({ content }: { content: string }) {
     return (
       <ReactMarkdown
@@ -81,6 +124,8 @@ export default function ProjectPage() {
         components={{
           code: CodeBlock as never,
           img: ImageRenderer as never,
+          video: VideoRenderer,
+          a: LinkRenderer,
         }}
       >
         {content}
